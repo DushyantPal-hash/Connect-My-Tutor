@@ -1978,8 +1978,8 @@ body {
 
 .tuition-card>img {
   width: 100%;
-  height: 190px;
-  padding: .8rem 1rem 0;
+  /* height: 190px; */
+  /* padding: .8rem 1rem 0; */
   background: linear-gradient(135deg, #eaf7fb, #f4edff);
   object-fit: contain;
 }
@@ -1994,6 +1994,10 @@ body {
 
 .tuition-card-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
 }
 
 .tuition-card h3 {

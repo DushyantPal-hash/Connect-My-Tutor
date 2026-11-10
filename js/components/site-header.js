@@ -3,7 +3,7 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header id="header">
         <div class="container nav">
-          <a href="index.html" class="logo"><span class="logo-mark">✦</span>Connect My Tutor</a>
+          <a href="/" class="logo"><span class="logo-mark">✦</span>Connect My Tutor</a>
           <ul class="nav-links" id="navLinks">
             <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
