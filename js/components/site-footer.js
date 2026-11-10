@@ -5,7 +5,7 @@ class SiteFooter extends HTMLElement {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand-column">
-            <a href="index.html" class="logo footer-brand">
+            <a href="/" class="logo footer-brand">
               <span class="logo-mark">✦</span>
               Connect My Tutor
             </a>
