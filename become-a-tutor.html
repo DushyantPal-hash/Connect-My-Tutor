@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Share your teaching experience and register your interest in tutoring with Connect My Tutor." />
+  <title>Become a Tutor — Connect My Tutor</title>
+  <link rel="icon" href="images/logo/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v11/font/simple-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <site-header></site-header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Teach with Connect My Tutor</span>
+        <h1>Help someone discover what they’re capable of.</h1>
+        <p>Bring your subject expertise and your own teaching style to learners looking for one-to-one support.</p>
+        <div class="page-actions"><a href="for-tutors.html" class="btn btn-primary">Open tutor application</a></div>
+      </div>
+    </section>
+    <section class="page-section page-section-cream">
+      <div class="container content-grid">
+        <article class="content-card">
+          <h2>Teach your way</h2>
+          <p>Share your availability and discuss an online or in-person approach that suits you and your learner.</p>
+        </article>
+        <article class="content-card">
+          <h2>Focus on meaningful progress</h2>
+          <p>Help students build understanding, confidence, and a clear path toward their learning goals.</p>
+        </article>
+        <article class="content-card">
+          <h2>Start a conversation</h2>
+          <p>Tell us about your experience and the subjects you teach. Our team can follow up when applications are
+            connected.</p>
+        </article>
+      </div>
+    </section>
+    <section class="page-content">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Register your interest</span>
+          <h2 class="section-title">Tell us about yourself.</h2>
+          <p>Share a few details about your teaching experience and the subjects you’d like to teach.</p>
+          <p class="site-disclaimer">Our detailed tutor application asks about your teaching subjects, qualifications,
+            location, and availability.</p>
+          <a href="for-tutors.html" class="btn btn-primary">Continue to the tutor application</a>
+        </div>
+        <form data-demo-form>
+          <div class="two">
+            <div class="field"><label for="tutorName">Full name</label><input id="tutorName" name="name"
+                autocomplete="name" required /></div>
+            <div class="field"><label for="tutorEmail">Email</label><input id="tutorEmail" name="email" type="email"
+                autocomplete="email" required /></div>
+          </div>
+          <div class="field"><label for="tutorSubject">Subject(s) you teach</label><input id="tutorSubject"
+              name="subjects" placeholder="e.g. Mathematics, Physics" required /></div>
+          <div class="field"><label for="tutorExperience">Teaching experience</label><textarea id="tutorExperience"
+              name="experience" rows="5" placeholder="Tell us about your experience and approach…" required></textarea>
+          </div>
+          <div class="form-success" aria-live="polite" hidden>Thanks for your interest! This demo form is ready to
+            connect to an application service.</div>
+          <button type="submit" class="btn btn-primary form-submit">Register my interest</button>
+          <p class="form-note">Demo form only; submissions are not sent to a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
