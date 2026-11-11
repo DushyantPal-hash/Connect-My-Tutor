@@ -1828,7 +1828,24 @@ body {
   transition: transform .2s;
 }
 
+.test span,
+.test {
+  transition: transform .2s;
+}
+
+.test:hover {
+  transform: scale(1.05);
+}
+
 .course-card:hover .course-link span {
+  transform: translateX(4px);
+}
+
+.tuition-card:hover .course-link span {
+  transform: translateX(4px);
+}
+
+.test:hover span {
   transform: translateX(4px);
 }
 

@@ -34,7 +34,7 @@
 }
 
 .facebook:hover {
-    background: var(--linear-bg-test);
+    background: linear-gradient(to right, #a5f3fc, #60a5fa, #4f46e5);
 }
 
 .threads:hover {

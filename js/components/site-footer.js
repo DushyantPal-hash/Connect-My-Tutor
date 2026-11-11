@@ -21,11 +21,11 @@ class SiteFooter extends HTMLElement {
                 <a href="https://www.facebook.com/letstawkai" class="facebook" aria-label="Facebook">
                   <i class="si si-facebook"></i>
                 </a>
-                <a href="https://x.com/letstawkai" class="twitter" aria-label="X">
-                  <i class="fab fa-twitter"></i>
-                </a>
                 <a href="https://www.instagram.com/" class="instagram" aria-label="Instagram">
                   <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/letstawkai" class="twitter" aria-label="X">
+                  <i class="fab fa-twitter"></i>
                 </a>
               </div>
             </div>

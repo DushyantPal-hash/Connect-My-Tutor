@@ -57,7 +57,7 @@ class CourseDetail extends HTMLElement {
                 const related = courseTracks.find(
                   (track) => track.slug === slug,
                 );
-                return `<a href="course-${related.slug}.html">${related.title}<span aria-hidden="true">→</span></a>`;
+                return `<a href="course-${related.slug}.html">${related.title}<span aria-hidden="true">▶</span></a>`;
               })
               .join("")}
           </div>
