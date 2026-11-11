@@ -31,39 +31,55 @@
                 <a href="#tuition-formats">Explore options <span aria-hidden="true">→</span></a>
             </div>
             <div class="hero-grid">
-                <div>
-                    <span class="eyebrow hero-location">Personal tutoring, made personal</span>
-                    <h1>Find your <span class="hero-highlight">perfect tutor</span> for every learning goal.</h1>
-                    <p>
-                        Connect with a tutor for focused one-to-one learning in the subjects and syllabus that matter to
-                        you. Choose online lessons or ask about home tuition.
-                    </p>
-                    <div class="hero-trust-list" aria-label="Tutoring benefits">
-                        <span><b aria-hidden="true">✓</b> One-to-one learning</span>
-                        <span><b aria-hidden="true">✓</b> Flexible lesson formats</span>
-                        <span><b aria-hidden="true">✓</b> School and exam support</span>
+                <div class="course-carousel" id="courseCarousel" aria-label="Featured courses">
+                    <div class="course-slide-copy" id="courseSlide" role="group" aria-roledescription="slide"
+                        aria-label="Course 1 of 11">
+                        <span class="eyebrow hero-location" id="courseCategory">International curriculum</span>
+                        <h1 id="courseTitle">Personal tutoring, tailored to <span class="hero-highlight">your
+                                course.</span></h1>
+                        <p id="courseSummary">Explore one-to-one support across school curricula and exam preparation.
+                        </p>
+                        <div class="course-slide-subjects" id="courseSubjects" aria-label="Subjects in this course">
+                        </div>
+                        <div class="hero-trust-list" aria-label="Tutoring benefits">
+                            <span><b aria-hidden="true">✓</b> One-to-one learning</span>
+                            <span><b aria-hidden="true">✓</b> Flexible lesson formats</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="course-ib.html" class="btn btn-primary" id="courseExploreLink">Explore course
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    aria-hidden="true">
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                            <a href="for-parents.html" class="btn btn-outline">Find my tutor</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat"><b>11 courses</b><span>Curricula &amp; exams</span></div>
+                            <div class="stat"><b>Flexible</b><span>Online or at home</span></div>
+                        </div>
                     </div>
-                    <div class="hero-actions">
-                        <a href="for-parents.html" class="btn btn-primary">Find my tutor
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6" />
-                            </svg></a>
-                        <a href="courses.html" class="btn btn-outline">Explore courses</a>
+                    <div class="hero-visual">
+                        <div class="hero-card home-hero-card">
+                            <img class="hero-student-art" id="courseHeroImage" src="images/academic-illustration.svg"
+                                alt="" />
+                        </div>
+                        <div class="float-chip chip-1"><span class="dot"></span><span id="courseVisualLabel">Personal
+                                learning</span></div>
+                        <div class="float-chip chip-2"><span class="dot"></span> Learn at your pace</div>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat"><b>Personal</b><span>One-to-one lessons</span></div>
-                        <div class="stat"><b>11 tracks</b><span>Curricula &amp; exams</span></div>
-                        <div class="stat"><b>Flexible</b><span>Online or at home</span></div>
+                    <div class="course-carousel-controls">
+                        <span class="course-carousel-count" id="courseSlideCount">01 <span>/ 11</span></span>
+                        <div class="course-carousel-dots" id="courseCarouselDots" aria-label="Choose a course"></div>
+                        <div class="course-carousel-buttons">
+                            <button class="course-carousel-toggle" id="courseCarouselToggle" type="button"
+                                aria-label="Pause automatic course slides" title="Pause automatic slides">Ⅱ</button>
+                            <button class="course-carousel-arrow" id="courseCarouselPrevious" type="button"
+                                aria-label="Previous course">←</button>
+                            <button class="course-carousel-arrow" id="courseCarouselNext" type="button"
+                                aria-label="Next course">→</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-card home-hero-card">
-                        <img class="hero-student-art" src="images/academic-illustration.svg"
-                            alt="Illustration of a student learning with a tutor" />
-                    </div>
-                    <div class="float-chip chip-1"><span class="dot"></span> Online tuition</div>
-                    <div class="float-chip chip-2"><span class="dot"></span> School &amp; exam support</div>
-                    <div class="float-chip chip-3"><span class="dot"></span> Learn at your pace</div>
                 </div>
             </div>
         </div>
@@ -79,82 +95,82 @@
                     <p class="section-sub">From school foundations to competitive exams, get focused guidance for the
                         curriculum and goals that matter to you.</p>
                 </div>
-                <a href="courses.html" class="btn btn-outline">View all courses</a>
+                <a href="courses.html" class="btn btn-outline-black">View all courses</a>
             </div>
             <div class="course-grid">
                 <a class="course-card course-mint" href="course-ib.html">
                     <span class="course-type">International curriculum</span><img class="course-tile-art"
-                        src="images/academic-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/ib.webp" alt="" loading="lazy">
                     <h3>IB</h3>
                     <p>Personalized support for IB learners across all subjects.</p><span class="course-link">Explore
                         track <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-lilac" href="course-igcse.html">
                     <span class="course-type">International curriculum</span><img class="course-tile-art"
-                        src="images/exam-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/igcse.webp" alt="" loading="lazy">
                     <h3>IGCSE</h3>
                     <p>Clear, confident preparation for Cambridge assessments.</p><span class="course-link">Explore
                         track <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-blue" href="course-sat.html">
                     <span class="course-type">Global test prep</span><img class="course-tile-art"
-                        src="images/exam-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/sat.webp" alt="" loading="lazy">
                     <h3>SAT</h3>
                     <p>Build skills and strategy for your next big test.</p><span class="course-link">Explore
                         track <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-peach" href="course-act.html">
                     <span class="course-type">Global test prep</span><img class="course-tile-art"
-                        src="images/exam-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/act.webp" alt="" loading="lazy">
                     <h3>ACT</h3>
                     <p>Structured test preparation with a personal study plan.</p><span class="course-link">Explore
                         track <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-peach" href="course-aps.html">
                     <span class="course-type">Global test prep</span><img class="course-tile-art"
-                        src="images/science-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/ap.webp" alt="" loading="lazy">
                     <h3>APs</h3>
                     <p>Advanced learning across STEM, humanities and more.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-mint" href="course-aqa.html">
                     <span class="course-type">International curriculum</span><img class="course-tile-art"
-                        src="images/academic-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/aqa.webp" alt="" loading="lazy">
                     <h3>AQA</h3>
                     <p>Subject-specific support, revision and exam confidence.</p><span class="course-link">Explore
                         track <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-blue" href="course-pearson-edexcel.html">
                     <span class="course-type">International curriculum</span><img class="course-tile-art"
-                        src="images/exam-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/pearson.webp" alt="" loading="lazy">
                     <h3>Pearson Edexcel</h3>
                     <p>Strengthen understanding and practical exam skills.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-gold" href="course-jee.html">
                     <span class="course-type">Indian competitive exams</span><img class="course-tile-art"
-                        src="images/science-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/jee.webp" alt="" loading="lazy">
                     <h3>JEE</h3>
                     <p>Concept mastery in Physics, Chemistry and Mathematics.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-lilac" href="course-neet.html">
                     <span class="course-type">Indian competitive exams</span><img class="course-tile-art"
-                        src="images/science-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/neet.webp" alt="" loading="lazy">
                     <h3>NEET</h3>
                     <p>Focused preparation in Biology, Chemistry and Physics.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-mint" href="course-foundation.html">
                     <span class="course-type">School foundation</span><img class="course-tile-art"
-                        src="images/academic-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/foundation.webp" alt="" loading="lazy">
                     <h3>Foundation</h3>
                     <p>Build strong fundamentals and lasting confidence.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
                 </a>
                 <a class="course-card course-boardprep" href="course-boardprep.html">
                     <span class="course-type">Board prep</span><img class="course-tile-art"
-                        src="images/exam-illustration.svg" alt="" loading="lazy">
+                        src="images/inside-images/courses/board.webp" alt="" loading="lazy">
                     <h3>BoardPrep</h3>
                     <p>Targeted preparation for CBSE, ICSE and state boards.</p><span class="course-link">Explore track
                         <span aria-hidden="true">→</span></span>
@@ -173,7 +189,7 @@
                     <p class="section-sub">Get focused one-to-one support in the setting that works best for you and
                         your family.</p>
                 </div>
-                <a href="for-parents.html" class="btn btn-outline">Request tuition</a>
+                <a href="for-parents.html" class="btn btn-outline-black">Request tuition</a>
             </div>
             <div class="tuition-grid">
                 <article class="tuition-card tuition-online">
@@ -265,7 +281,7 @@
                     <p class="section-sub">Every detail of Connect My Tutor is designed around one thing: remarkable
                         learning outcomes.</p>
                 </div>
-                <a href="about.html" class="btn btn-outline">Get started</a>
+                <a href="about.html" class="btn btn-outline-black">Get started</a>
             </div>
             <div class="features">
                 <div class="feature">
@@ -367,7 +383,7 @@
                     <h2 class="section-title">Meet a few of our favourites.</h2>
                     <p class="section-sub">Thousands of verified tutors across every subject and level.</p>
                 </div>
-                <a href="tutors.html" class="btn btn-outline">View all tutors</a>
+                <a href="tutors.html" class="btn btn-outline-black">View all tutors</a>
             </div>
             <div class="tutors-grid">
                 <div class="tutor">
