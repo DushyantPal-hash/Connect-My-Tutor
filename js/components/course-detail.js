@@ -23,7 +23,7 @@ class CourseDetail extends HTMLElement {
           <p>${course.description}</p>
           <div class="page-actions">
             <a href="for-parents.html" class="btn btn-primary">Find ${course.title} support</a>
-            <a href="courses.html" class="btn btn-outline">All courses</a>
+            <a href="courses.html" class="btn btn-outline-black">All courses</a>
           </div>
         </div>
       </section>
