@@ -8,7 +8,7 @@ class SiteHeader extends HTMLElement {
             <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="for-parents.html">For parents</a></li>
-            <li><a href="for-tutors.html">For tutors</a></li>
+            <li><a href="become-a-tutor.html">Become a tutor</a></li>
             <li><a href="tutors.html">Find tutors</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
