@@ -30,7 +30,7 @@ class TutorDetail extends HTMLElement {
           <div>
             <span class="eyebrow">${tutor.subject} tutor</span>
             <h1>${tutor.name}</h1>
-            <p>${tutor.expertise} · ${tutor.experience} teaching experience · <span class="rating">★ ${tutor.rating}</span></p>
+            <p>${tutor.expertise}<br>${tutor.experience} of teaching ·  ${tutor.lessonTypes.join(", ")} · <span class="rating">★ ${tutor.rating}</span></p>
             <div class="page-actions">
               <a href="for-parents.html" class="btn btn-primary">Enquire about ${tutor.name}</a>
               <a href="tutors.html" class="btn btn-outline-black">All tutors</a>
@@ -41,6 +41,7 @@ class TutorDetail extends HTMLElement {
       <section class="page-section">
         <div class="container tutor-profile-layout">
           <div class="tutor-profile-copy">
+          <p class="sample-content-note">This tutor profile, including qualifications and experience, is illustrative sample content and must be verified before publication.</p>
             <span class="eyebrow">Teaching approach</span>
             <h2 class="section-title">A learning plan shaped around the student.</h2>
             <p>${tutor.bio}</p>
@@ -51,9 +52,12 @@ class TutorDetail extends HTMLElement {
           </div>
           <aside class="tutor-profile-facts">
             <span class="eyebrow">At a glance</span>
+            <p><strong>Qualification</strong>${tutor.qualification}</p>
             <p><strong>Specialty</strong>${tutor.expertise}</p>
-            <p><strong>Experience</strong>${tutor.experience}</p>
+            <p><strong>Teaching experience</strong>${tutor.teachingExperience}</p>
             <p><strong>Student rating</strong>★ ${tutor.rating} / 5</p>
+            <p><strong>Languages</strong> ${tutor.languages.join(", ")}</p>
+            <p><strong>Lesson types</strong> ${tutor.lessonTypes.join(", ")}</p>
           </aside>
         </div>
       </section>
@@ -64,14 +68,16 @@ class TutorDetail extends HTMLElement {
             <a href="courses.html" class="btn btn-outline">All courses</a>
           </div>
           <div class="related-course-links">
-            ${relatedCourses.length
-              ? relatedCourses
-                  .map(
-                    (course) =>
-                      `<a href="course-${course.slug}.html">${course.title}<span aria-hidden="true">▶</span></a>`,
-                  )
-                  .join("")
-              : "<p>Contact us to discuss course options with this tutor.</p>"}
+            ${
+              relatedCourses.length
+                ? relatedCourses
+                    .map(
+                      (course) =>
+                        `<a href="course-${course.slug}.html">${course.title}<span aria-hidden="true">▶</span></a>`,
+                    )
+                    .join("")
+                : "<p>Contact us to discuss course options with this tutor.</p>"
+            }
           </div>
         </div>
       </section>
