@@ -57,10 +57,11 @@ class CourseDetail extends HTMLElement {
             <a href="tutors.html" class="btn btn-outline">All tutors</a>
           </div>
           <div class="tutors-grid course-related-tutors">
-            ${relatedTutors.length
-              ? relatedTutors
-                  .map(
-                    (tutor) => `
+            ${
+              relatedTutors.length
+                ? relatedTutors
+                    .map(
+                      (tutor) => `
                 <a class="tutor" href="tutor.html?tutor=${tutor.slug}">
                   <div class="tutor-photo ${tutor.imageClass}">
                     <img src="${tutor.image}" alt="${tutor.name}, ${tutor.subject} tutor">
@@ -68,14 +69,15 @@ class CourseDetail extends HTMLElement {
                   </div>
                   <div class="tutor-body">
                     <h2>${tutor.name}</h2>
-                    <div class="tutor-meta"><span>${tutor.expertise} · ${tutor.experience}</span><span class="rating">★ ${tutor.rating}</span></div>
+                    <div class="tutor-meta"><span>${tutor.experience}</span><span class="rating">★ ${tutor.rating}</span></div>
                     <span class="course-link">View profile <span aria-hidden="true">▶</span></span>
                   </div>
                 </a>
               `,
-                  )
-                  .join("")
-              : '<p>Contact us and we will help you find a tutor for this course.</p>'}
+                    )
+                    .join("")
+                : "<p>Contact us and we will help you find a tutor for this course.</p>"
+            }
           </div>
         </div>
       </section>

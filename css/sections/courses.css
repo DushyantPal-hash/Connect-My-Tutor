@@ -329,7 +329,7 @@
 
 .tutor-profile-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 450px;
     gap: 3rem;
     align-items: start;
 }
@@ -347,7 +347,7 @@
 
 .tutor-profile-facts {
     display: grid;
-    gap: 1rem;
+    gap: 0.6rem;
     padding: 1.5rem;
     border: 1px solid #e1eaf2;
     border-radius: 18px;
@@ -362,6 +362,15 @@
 
 .tutor-profile-facts strong {
     color: var(--ink);
+}
+
+.sample-content-note {
+    margin: 0 0 1.4rem;
+    padding: .8rem 1rem;
+    border-left: 3px solid var(--gold);
+    background: #fff8e9;
+    color: #65573d;
+    font-size: .84rem;
 }
 
 @media(max-width: 980px) {

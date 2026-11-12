@@ -1,11 +1,34 @@
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
-
 /* --- Tablet --- */
 @media(max-width: 1100px) {
     .nav-cta .btn-outline {
         display: none;
+    }
+
+    .nav-links,
+    .nav-cta .btn-outline,
+    .nav-cta .btn-primary {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 78px 0 auto;
+        background: var(--paper);
+        flex-direction: column;
+        padding: 1.5rem 4%;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--line);
+        transform: translateY(-130%);
+        transition: .35s;
+        display: flex;
+    }
+
+    .nav-links.show {
+        transform: translateY(0);
     }
 }
 
