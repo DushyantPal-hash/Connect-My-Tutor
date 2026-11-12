@@ -143,6 +143,18 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.course-category {
+    padding: 1.2rem 0;
+}
+
+.course-category>h3 {
+    margin-bottom: 1.1rem;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
 .course-directory-card {
     min-height: 340px;
 }
@@ -257,4 +269,120 @@
 
 .course-not-found {
     padding: 10rem 0 5rem;
+}
+
+.course-related-tutors {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.course-related-tutors .tutor,
+.tutor-catalog .tutor {
+    color: inherit;
+}
+
+.course-related-tutors .tutor-body h2,
+.tutor-catalog .tutor-body h2 {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.course-related-tutors .tutor-photo img,
+.tutor-catalog .tutor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-related-tutors .course-link,
+.tutor-catalog .course-link {
+    margin-top: 1rem;
+}
+
+.learner-experiences {
+    background: linear-gradient(140deg, #f2f8fc, #f8f3ff);
+}
+
+.tutor-profile-hero {
+    padding: 9.5rem 0 5rem;
+}
+
+.tutor-profile-heading {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.tutor-profile-heading>img {
+    width: 220px;
+    height: 220px;
+    border: 8px solid rgba(255, 255, 255, .72);
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.tutor-profile-heading .page-actions {
+    justify-content: flex-start;
+}
+
+.tutor-profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.tutor-profile-copy>p {
+    color: var(--muted);
+}
+
+.tutor-profile-copy h3 {
+    margin: 1.8rem 0 .8rem;
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.tutor-profile-facts {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #e1eaf2;
+    border-radius: 18px;
+    background: #f7fbfe;
+}
+
+.tutor-profile-facts p {
+    display: grid;
+    gap: .2rem;
+    color: var(--muted);
+}
+
+.tutor-profile-facts strong {
+    color: var(--ink);
+}
+
+@media(max-width: 980px) {
+    .course-related-tutors {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 640px) {
+    .course-related-tutors {
+        grid-template-columns: 1fr;
+    }
+
+    .tutor-profile-heading,
+    .tutor-profile-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .tutor-profile-heading>img {
+        width: 150px;
+        height: 150px;
+    }
 }
