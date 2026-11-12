@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Application Page
+   ========================================================================== */
+
+.application-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 9.5rem 0 5.5rem;
+    background:
+        radial-gradient(ellipse at 82% 18%, rgba(255, 219, 150, .58), transparent 34%),
+        radial-gradient(ellipse at 16% 85%, rgba(197, 232, 247, .88), transparent 42%),
+        linear-gradient(125deg, #f8fcff 0%, #edf8ff 55%, #f5f0ff 100%);
+}
+
+.application-hero::before {
+    display: none;
+}
+
+.application-hero h1,
+.application-hero p {
+    color: var(--ink);
+}
+
+.application-hero h1 {
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+}
+
+.application-hero p {
+    max-width: 700px;
+    margin-top: .8rem;
+    color: var(--text);
+}
+
+.application-hero .eyebrow {
+    color: #DF812E;
+}
+
+.application-panel {
+    margin-top: -2.5rem;
+    position: relative;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 20px;
+    background: rgb(243 242 255);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(14px);
+}
+
+.application-intro {
+    max-width: 760px;
+    margin-bottom: 1.7rem;
+    color: var(--muted);
+}
+
+.application-form {
+    display: grid;
+    gap: 1.25rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.application-fields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.15rem 1rem;
+}
+
+.application-fields .field-wide {
+    grid-column: span 4;
+}
+
+.application-form .field input,
+.application-form .field select,
+.application-form .field textarea {
+    background: rgba(255, 255, 255, .94);
+}
+
+.application-form fieldset {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+}
+
+.application-form legend {
+    margin-bottom: .65rem;
+    color: var(--ink);
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.application-footnote {
+    color: var(--muted);
+    font-size: .82rem;
+}

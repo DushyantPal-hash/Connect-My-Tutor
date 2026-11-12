@@ -1,0 +1,49 @@
+/* ==========================================================================
+   CTA Band
+   ========================================================================== */
+
+.cta-band {
+    background:
+        radial-gradient(circle at 85% 0%, rgba(185, 143, 226, .35), transparent 35%),
+        linear-gradient(135deg, #eaf7fc 0%, #f4efff 100%);
+    border: 1px solid #e2eaf1;
+    border-radius: 24px;
+    padding: 4.5rem 4rem;
+    text-align: center;
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-band::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(214, 193, 154, .22), transparent 70%);
+    top: -200px;
+    right: -100px;
+}
+
+.cta-band h2 {
+    color: var(--ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.cta-band p {
+    color: var(--text);
+    max-width: 480px;
+    margin: 0 auto 2.2rem;
+}
+
+.cta-band .btn-primary {
+    background: var(--gold);
+    color: #fff;
+}
+
+.cta-band .btn-primary:hover {
+    background: var(--gold-soft);
+    color: var(--ink);
+}

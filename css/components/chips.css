@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Floating Chips
+   ========================================================================== */
+
+.float-chip {
+    position: absolute;
+    background: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: .7rem 1rem;
+    font-size: .8rem;
+    box-shadow: 0 12px 30px -12px rgba(28, 26, 23, .25);
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    animation: float 5s ease-in-out infinite;
+}
+
+.float-chip .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--sage);
+}
+
+.chip-1 {
+    top: 12%;
+    left: -8%;
+}
+
+.chip-2 {
+    bottom: 18%;
+    right: -6%;
+    animation-delay: 1.4s;
+}
+
+.chip-3 {
+    top: 52%;
+    left: -14%;
+    animation-delay: 2.6s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}

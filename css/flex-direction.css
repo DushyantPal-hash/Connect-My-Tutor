@@ -1,6 +1,0 @@
-.flex-direction {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    grid-column: span 4;
-}

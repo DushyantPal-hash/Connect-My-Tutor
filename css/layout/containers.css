@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Containers & Page Layout
+   ========================================================================== */
+
+.container {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 4.5rem 0;
+}
+
+.page-content {
+    padding: 4.5rem 0 6rem;
+}
+
+.content-narrow {
+    margin: 0 auto;
+}
+
+.content-narrow h2 {
+    font-size: 2rem;
+    margin: 2.5rem 0 .8rem;
+}
+
+.content-narrow p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.content-narrow p strong {
+    color: var(--ink);
+}
+
+.page-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.8rem;
+    justify-content: center;
+}
+
+.page-section {
+    padding: 4.5rem 0;
+}
+
+.page-section-cream {
+    background: var(--cream);
+}
+
+.page-section-dark {
+    background: var(--ink);
+    color: #cfc9bd;
+}
+
+.page-section-dark h2,
+.page-section-dark h3 {
+    color: var(--paper);
+}
+
+.page-section-dark p {
+    color: #b5ae9f;
+}
+
+.page-section-dark .step p {
+    color: #9c968a;
+}
+
+.site-disclaimer {
+    font-size: .8rem;
+    color: var(--muted);
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Design Tokens / CSS Custom Properties
+   ========================================================================== */
+
+:root {
+    /* Colors */
+    --ink: #17283e;
+    --paper: #fbfdff;
+    --cream: #eef7fc;
+    --gold: #DF812E;
+    --gold-soft: #DF812E6a;
+    --tab-background: #df812e41;
+    --card-background: rgb(243 242 255);
+    --sage: #288875;
+    --line: #dceaf2;
+    --text: #3e526a;
+    --muted: #72849a;
+
+    /* Shape */
+    --radius: 14px;
+
+    /* Elevation */
+    --shadow: 0 20px 50px -20px rgba(31, 72, 105, .2);
+
+    /* Typography */
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Manrope', system-ui, sans-serif;
+}

@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Features
+   ========================================================================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.feature {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .4s;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.feature:hover::after {
+    transform: scaleX(1);
+}
+
+.feature .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+}
+
+.feature h3 {
+    font-size: 1.45rem;
+    margin-bottom: .55rem;
+}
+
+.feature p {
+    font-size: .92rem;
+    color: var(--muted);
+}

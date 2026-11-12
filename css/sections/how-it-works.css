@@ -1,0 +1,60 @@
+/* ==========================================================================
+   How It Works
+   ========================================================================== */
+
+.how {
+    background: linear-gradient(130deg, #eff8fc, #f7f3ff);
+    color: var(--text);
+}
+
+.how .section-title,
+.how h3 {
+    color: var(--ink);
+}
+
+.how .section-sub,
+.step p {
+    color: var(--muted);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    margin-top: 3rem;
+}
+
+.step {
+    border: 1px solid #dceaf2;
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, .78);
+    box-shadow: 0 8px 26px rgba(37, 83, 112, .05);
+    transition: .35s;
+}
+
+.step:hover {
+    background: #fff;
+    border-color: #b992e2;
+}
+
+.step:hover h3 {
+    color: var(--ink);
+}
+
+.step-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: .85;
+    line-height: 1;
+}
+
+.step h3 {
+    margin: 1.2rem 0 .5rem;
+    font-size: 1.4rem;
+}
+
+.step p {
+    font-size: .92rem;
+}

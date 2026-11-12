@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Hero Section (Default / Generic)
+   ========================================================================== */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 9rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 82% 18%, rgba(255, 219, 107, .72), transparent 34%),
+        radial-gradient(ellipse at 16% 36%, rgba(176, 141, 87, .48), transparent 40%),
+        linear-gradient(125deg, #5b4530 0%, #b38a4a 42%, #ded0ae 100%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 5.4vw, 4.3rem);
+    letter-spacing: -.01em;
+}
+
+.hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.hero p {
+    margin: 1.4rem 0 2.2rem;
+    font-size: 1.08rem;
+    color: var(--muted);
+    max-width: 480px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.6rem;
+    margin-top: 2rem;
+    padding-top: 1cqb;
+    border-top: 1px solid var(--line);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat b {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    color: var(--paper);
+    font-weight: 700;
+}
+
+.stat span {
+    font-size: .8rem;
+    color: #cfb88a;
+    letter-spacing: .04em;
+}
+
+/* Hero Visual */
+.hero-visual {
+    position: relative;
+}
+
+.hero-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    aspect-ratio: 4/4.6;
+    background: linear-gradient(160deg, #2a2723 0%, #40382e 45%, #8a6d44 100%);
+}
+
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(420px 280px at 80% 15%, rgba(214, 193, 154, .35), transparent 60%);
+}
+
+.hero-figure {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 74%;
+}
