@@ -1,12 +1,40 @@
-/* ============================================
-   All CSS files are imported here for easier management
-   ============================================ */
-@import url('styles.css');
-/* ============================================
-   FOOTER
-   ============================================ */
-@import url('footer.css');
-/* ============================================
-   Flexbox and Grid Layouts
-   ============================================ */
-@import url('flex-direction.css');
+/* ==========================================================================
+   Main Stylesheet - Imports all modules
+   ========================================================================== */
+
+/* Base */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+@import url('./base/typography.css');
+
+/* Layout */
+@import url('./layout/containers.css');
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+
+/* Components */
+@import url('./components/buttons.css');
+@import url('./components/cards.css');
+@import url('./components/forms.css');
+@import url('./components/chips.css');
+
+/* Sections */
+@import url('./sections/hero.css');
+@import url('./sections/marquee.css');
+@import url('./sections/features.css');
+@import url('./sections/how-it-works.css');
+@import url('./sections/tutors.css');
+@import url('./sections/testimonials.css');
+@import url('./sections/cta-band.css');
+@import url('./sections/contact.css');
+@import url('./sections/courses.css');
+@import url('./sections/tuition.css');
+@import url('./sections/join.css');
+
+/* Pages */
+@import url('./pages/page-hero.css');
+@import url('./pages/application.css');
+@import url('./pages/home.css');
+
+/* Utilities (must be last) */
+@import url('./utilities/responsive.css');

@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Generic Cards
+   ========================================================================== */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.content-card h2,
+.content-card h3 {
+    font-size: 1.45rem;
+    margin-bottom: .65rem;
+}
+
+.content-card p {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 1.2rem;
+}

@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: center;
+    background: aliceblue;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+
+.contact-info p {
+    color: var(--muted);
+    font-size: .95rem;
+    margin-bottom: 1.8rem;
+}
+
+.contact-line {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.1rem;
+    font-size: .92rem;
+}
+
+.contact-line .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.contact-direct {
+    display: grid;
+    gap: .8rem;
+    margin-top: 2rem;
+}
+
+.contact-direct a {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.contact-direct a:hover {
+    color: var(--gold);
+}
+
+.contact-section {
+    padding-top: 1rem;
+}
+
+/* FAQ */
+.faq-list {
+    display: grid;
+    gap: .9rem;
+    margin-top: 2.5rem;
+}
+
+.faq-list details {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.faq-list details p {
+    color: var(--muted);
+    padding-top: .8rem;
+}

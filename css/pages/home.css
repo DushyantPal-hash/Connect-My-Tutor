@@ -1,0 +1,463 @@
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+.home-page {
+    background: #f7f1e8;
+}
+
+/* Header override for home */
+.home-page #header,
+.home-page #header.scrolled {
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+}
+
+.home-page #header .nav {
+    width: min(1160px, calc(100% - 48px));
+    height: 82px;
+    margin: 14px auto 0;
+    padding: 0 1.35rem;
+    border: 1px solid rgba(255, 255, 255, .95);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 12px 36px rgba(49, 46, 39, .09);
+    backdrop-filter: blur(16px);
+}
+
+/* Home Hero */
+.home-page .hero.application-hero {
+    min-height: 0;
+    padding: 7.5rem 0 5.2rem;
+    background:
+        radial-gradient(ellipse at 87% 35%, rgba(251, 224, 188, .76), transparent 34%),
+        radial-gradient(ellipse at 9% 88%, rgba(224, 239, 232, .8), transparent 38%),
+        linear-gradient(125deg, #f8f2e9 0%, #f6efe5 48%, #f3efe7 100%);
+}
+
+.hero.application-hero {
+    min-height: 740px;
+    background:
+        radial-gradient(ellipse at 86% 20%, rgba(255, 219, 150, .58), transparent 30%),
+        radial-gradient(ellipse at 8% 85%, rgba(197, 232, 247, .88), transparent 42%),
+        linear-gradient(125deg, #f8fcff 0%, #edf8ff 55%, #f5f0ff 100%);
+}
+
+.hero.application-hero::after,
+.hero.application-hero::before {
+    display: none;
+}
+
+.hero.application-hero h1 {
+    color: var(--ink);
+}
+
+.hero.application-hero h1 em {
+    color: var(--gold);
+}
+
+.hero.application-hero p {
+    color: var(--text);
+}
+
+.hero.application-hero .eyebrow {
+    color: var(--gold);
+}
+
+.hero.application-hero .btn-primary {
+    background: var(--gold);
+    color: #fff;
+}
+
+.hero.application-hero .btn-primary:hover {
+    background: var(--gold-soft);
+}
+
+.hero.application-hero .btn-outline {
+    color: var(--ink);
+    border-color: #b6cadd;
+    background: rgba(255, 255, 255, .62);
+}
+
+.hero.application-hero .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.hero.application-hero .hero-stats {
+    border-color: #d6e5ee;
+}
+
+.hero.application-hero .stat b {
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.hero.application-hero .stat span {
+    color: var(--muted);
+}
+
+.hero.application-hero .hero-card {
+    background:
+        radial-gradient(circle at 50% 30%, #fff 0%, transparent 42%),
+        linear-gradient(145deg, #e0f3f1 0%, #f4edff 52%, #ffeed5 100%);
+    border: 1px solid rgba(255, 255, 255, .9);
+}
+
+.hero.application-hero .hero-card::before {
+    background: radial-gradient(420px 280px at 80% 15%, rgba(255, 255, 255, .55), transparent 60%);
+}
+
+/* Home Hero Notice */
+.home-page .hero-notice {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 54px;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin: 0 auto 3.2rem;
+    padding: .65rem 1.2rem;
+    border: 1px solid #d5e8df;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 8px 22px rgba(49, 80, 66, .06);
+    color: #3e526a;
+    font-size: .86rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.home-page .notice-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    border-radius: 50%;
+    background: #42a982;
+    box-shadow: 0 0 0 4px rgba(66, 169, 130, .12);
+}
+
+.home-page .hero-notice a {
+    color: #278875;
+    white-space: nowrap;
+}
+
+.home-page .hero-notice a span {
+    margin-left: .2rem;
+}
+
+/* Home Hero Grid */
+.home-page .hero-grid {
+    grid-template-columns: 1.08fr .92fr;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.home-page .course-carousel {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+}
+
+.home-page .course-slide-copy,
+.home-page .hero-visual {
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+.home-page .course-slide-copy.is-changing,
+.home-page .hero-student-art.is-changing {
+    opacity: .25;
+    transform: translateY(5px);
+}
+
+.home-page .course-slide-copy h1 {
+    min-height: 2.08em;
+}
+
+.home-page .course-slide-subjects {
+    display: flex;
+    min-height: 34px;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin: 1rem 0 .2rem;
+}
+
+.home-page .course-slide-subjects span {
+    padding: .35rem .7rem;
+    border: 1px solid #e8dfd3;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .76);
+    color: #596372;
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+/* Carousel Controls */
+.home-page .course-carousel-controls {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -.5rem;
+}
+
+.home-page .course-carousel-count {
+    color: #29364a;
+    font-size: .85rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.home-page .course-carousel-count span {
+    color: #89909a;
+    font-weight: 600;
+}
+
+.home-page .course-carousel-dots {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: .45rem;
+}
+
+.home-page .course-carousel-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: #d9d3ca;
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease;
+}
+
+.home-page .course-carousel-dot.is-current {
+    width: 28px;
+    background: #dc873b;
+}
+
+.home-page .course-carousel-buttons {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+}
+
+.home-page .course-carousel-arrow,
+.home-page .course-carousel-toggle {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #e3d9ca;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .8);
+    color: #29364a;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.home-page .course-carousel-toggle {
+    font-size: .85rem;
+}
+
+.home-page .course-carousel-arrow:hover,
+.home-page .course-carousel-toggle:hover {
+    border-color: #dc873b;
+    background: #fff;
+    color: #b9702b;
+}
+
+.home-page .course-carousel-arrow:focus-visible,
+.home-page .course-carousel-toggle:focus-visible,
+.home-page .course-carousel-dot:focus-visible {
+    outline: 3px solid rgba(220, 135, 59, .42);
+    outline-offset: 3px;
+}
+
+/* Home Hero Typography */
+.home-page .hero-location {
+    margin-bottom: 1rem;
+    padding: .55rem 1rem;
+    border: 1px solid #eadfce;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .82);
+    color: #b9702b;
+    font-size: .73rem;
+    letter-spacing: .03em;
+}
+
+.home-page .hero h1 {
+    max-width: 680px;
+    font-family: var(--sans);
+    font-size: clamp(2.8rem, 5.3vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -.065em;
+    line-height: 1.04;
+}
+
+.home-page .hero-highlight {
+    position: relative;
+    display: inline-block;
+    color: #df812e;
+    white-space: nowrap;
+}
+
+.home-page .hero-highlight::after {
+    position: absolute;
+    right: 0;
+    bottom: -.1em;
+    left: 0;
+    height: .09em;
+    border-radius: 999px;
+    background: #e29240;
+    content: "";
+    transform: rotate(-1.3deg);
+}
+
+.home-page .hero p {
+    max-width: 650px;
+    margin: 1.4rem 0 1.3rem;
+    color: #5e6875;
+    font-size: clamp(1rem, 1.5vw, 1.14rem);
+    line-height: 1.8;
+}
+
+.home-page .hero-trust-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin: 1.2rem 0 1.6rem;
+}
+
+.home-page .hero-trust-list span {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    gap: .45rem;
+    padding: .45rem .75rem;
+    border: 1px solid #e8dfd3;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .8);
+    color: #596372;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.home-page .hero-trust-list b {
+    display: grid;
+    width: 18px;
+    height: 18px;
+    place-items: center;
+    border-radius: 50%;
+    background: #fbe9d2;
+    color: #d98736;
+    font-size: .7rem;
+}
+
+.home-page .hero-actions {
+    gap: .75rem;
+}
+
+.home-page .hero-actions .btn-primary {
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(29, 40, 60, .15);
+}
+
+.home-page .hero-actions .btn-primary:hover {
+    background: #33465e;
+}
+
+.home-page .hero-actions .btn-outline {
+    border-color: #e4d8c8;
+    background: rgba(255, 255, 255, .7);
+    color: #26344b;
+}
+
+.home-page .hero-actions .btn-outline:hover {
+    border-color: #dba067;
+    color: #ad6527;
+}
+
+.home-page .hero-stats {
+    justify-content: flex-start;
+    gap: clamp(1rem, 3vw, 2.2rem);
+    margin-top: 1.65rem;
+    padding-top: 1.25rem;
+    border-color: #e3d9ca;
+}
+
+.home-page .hero-stats .stat {
+    align-items: flex-start;
+}
+
+.home-page .hero-stats .stat b {
+    color: #202b40;
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.home-page .hero-stats .stat span {
+    color: #74808a;
+    font-size: .72rem;
+}
+
+.home-page .hero-visual {
+    min-width: 0;
+    padding: 1rem;
+}
+
+.home-page .hero-card.home-hero-card {
+    display: grid;
+    aspect-ratio: 1 / .88;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, .95);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 75% 16%, rgba(250, 220, 166, .78), transparent 28%),
+        linear-gradient(145deg, #e8f4ef 0%, #f2f0fb 55%, #f9e9d8 100%);
+    box-shadow: 0 26px 70px rgba(99, 82, 59, .13);
+}
+
+.home-page .hero-card.home-hero-card::before {
+    background: radial-gradient(ellipse at 50% 80%, rgba(255, 255, 255, .72), transparent 55%);
+}
+
+.home-page .hero-student-art {
+    width: 94%;
+    height: 94%;
+    object-fit: contain;
+}
+
+.home-page .float-chip {
+    border-color: #ece5dc;
+    background: rgba(255, 255, 255, .95);
+    color: #354458;
+    box-shadow: 0 12px 28px rgba(70, 63, 53, .1);
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.home-page .float-chip .dot {
+    background: #42a982;
+}
+
+.arrow span,
+.arrow {
+    transition: transform .2s;
+}
+
+.arrow:hover {
+    transform: scale(1.05);
+}
+
+.arrow:hover span {
+    transform: translateX(4px);
+}

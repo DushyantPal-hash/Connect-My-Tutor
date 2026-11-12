@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .85rem 1.9rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .02em;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: var(--sans);
+    width: fit-content;
+}
+
+.btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--gold-soft);
+    color: var(--ink);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: var(--paper);
+    color: var(--paper);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+}
+
+.btn-outline-black {
+    border-color: var(--ink);
+    color: var(--ink);
+    background: transparent;
+}
+
+.btn-outline-black:hover {
+    border-color: #dba067;
+    color: #ad6527;
+    transform: translateY(-2px);
+}

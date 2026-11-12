@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Join Section
+   ========================================================================== */
+
+.join-section {
+    background: #fff;
+}
+
+.join-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.join-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.2rem;
+    align-items: start;
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f1faff, #fff);
+}
+
+.join-teacher {
+    background: linear-gradient(135deg, #f7f0ff, #fff);
+}
+
+.join-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 15px;
+    background: #e4f3fa;
+    color: #278b91;
+    font-size: 1.5rem;
+}
+
+.join-teacher .join-icon {
+    background: #efe2fa;
+    color: #8433c6;
+}
+
+.join-card h3 {
+    margin: 0 0 .55rem;
+    font-family: var(--sans);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.join-card p {
+    margin-bottom: 1.2rem;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.join-card .btn {
+    padding: .75rem 1.15rem;
+    background: var(--gold);
+    color: #fff;
+    font-size: .8rem;
+}
+
+.join-card .btn:hover {
+    background: var(--gold-soft);
+    color: var(--ink);
+}
