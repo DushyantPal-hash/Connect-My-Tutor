@@ -2,6 +2,8 @@ import "./components/site-header.js";
 import "./components/site-footer.js";
 import "./components/course-catalog.js";
 import "./components/course-detail.js";
+import "./components/tutor-catalog.js";
+import "./components/tutor-detail.js";
 import { courseTracks } from "./course-data.js";
 
 const header = document.getElementById("header");

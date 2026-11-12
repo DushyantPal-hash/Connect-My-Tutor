@@ -64,3 +64,11 @@
 .tuition-card:hover .course-link span {
     transform: translateX(4px);
 }
+
+.tutor .course-link {
+    margin-top: 0.5rem;
+}
+
+.tutor:hover .course-link span {
+    transform: translateX(4px);
+}
