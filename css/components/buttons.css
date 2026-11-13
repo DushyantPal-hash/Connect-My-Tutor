@@ -45,6 +45,18 @@
     transform: translateY(-2px);
 }
 
+.btn-outline-white {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: transparent;
+}
+
+.btn-outline-white:hover {
+    border-color: var(--gold-soft);
+    color: var(--gold-soft);
+    transform: translateY(-2px);
+}
+
 .btn-outline-black {
     border-color: var(--ink);
     color: var(--ink);

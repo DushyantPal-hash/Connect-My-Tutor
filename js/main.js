@@ -14,6 +14,44 @@ addEventListener("scroll", () => {
   header.classList.toggle("scrolled", scrollY > 30);
 });
 
+const reducedMotionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+if (
+  document.body.classList.contains("home-page") &&
+  !reducedMotionPreference.matches &&
+  "IntersectionObserver" in window
+) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -32px 0px" },
+  );
+  const revealTargets = document.querySelectorAll(
+    ".home-page .section-head, .home-page .course-card, .home-page .tuition-card, " +
+      ".home-page .join-card, .home-page .feature, .home-page .step, " +
+      ".home-page tutor-catalog, .home-page .quote, .home-page .cta-band, " +
+      ".home-page .contact-info, .home-page #contact form",
+  );
+
+  document.body.classList.add("has-scroll-reveal");
+  revealTargets.forEach((target) => {
+    const siblingIndex = Array.prototype.indexOf.call(
+      target.parentElement.children,
+      target,
+    );
+    target.style.setProperty(
+      "--reveal-delay",
+      `${Math.min(siblingIndex, 5) * 70}ms`,
+    );
+    target.classList.add("scroll-reveal");
+    revealObserver.observe(target);
+  });
+}
+
 hamburger.addEventListener("click", () => {
   const isOpen = hamburger.classList.toggle("open");
   navLinks.classList.toggle("show", isOpen);
@@ -37,132 +75,29 @@ if (marquee) {
 
 const courseCarousel = document.getElementById("courseCarousel");
 if (courseCarousel) {
-  const slide = document.getElementById("courseSlide");
-  const category = document.getElementById("courseCategory");
   const title = document.getElementById("courseTitle");
-  const summary = document.getElementById("courseSummary");
-  const subjects = document.getElementById("courseSubjects");
-  const exploreLink = document.getElementById("courseExploreLink");
-  const image = document.getElementById("courseHeroImage");
-  const visualLabel = document.getElementById("courseVisualLabel");
-  const slideCount = document.getElementById("courseSlideCount");
-  const dots = document.getElementById("courseCarouselDots");
-  const previous = document.getElementById("courseCarouselPrevious");
-  const next = document.getElementById("courseCarouselNext");
-  const toggle = document.getElementById("courseCarouselToggle");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let currentIndex = 0;
   let timer;
-  let autoplayEnabled = !reducedMotion.matches;
-
-  const renderDots = () => {
-    dots.replaceChildren(
-      ...courseTracks.map((course, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "course-carousel-dot";
-        dot.setAttribute("aria-label", `Show ${course.title} course`);
-        dot.addEventListener("click", () => showSlide(index));
-        return dot;
-      }),
-    );
-  };
-
-  const updateControls = () => {
-    const dotButtons = dots.querySelectorAll("button");
-    dotButtons.forEach((dot, index) => {
-      const isCurrent = index === currentIndex;
-      dot.classList.toggle("is-current", isCurrent);
-      if (isCurrent) dot.setAttribute("aria-current", "true");
-      else dot.removeAttribute("aria-current");
-    });
-
-    slide.setAttribute(
-      "aria-label",
-      `Course ${currentIndex + 1} of ${courseTracks.length}: ${courseTracks[currentIndex].title}`,
-    );
-    slideCount.innerHTML = `${String(currentIndex + 1).padStart(2, "0")} <span>/ ${String(courseTracks.length).padStart(2, "0")}</span>`;
-    toggle.textContent = autoplayEnabled ? "❚❚" : "▶▶";
-    toggle.setAttribute(
-      "aria-label",
-      autoplayEnabled
-        ? "Pause automatic course slides"
-        : "Play automatic course slides",
-    );
-    toggle.title = autoplayEnabled
-      ? "Pause automatic slides"
-      : "Play automatic slides";
-  };
-
-  const showSlide = (index) => {
-    currentIndex = (index + courseTracks.length) % courseTracks.length;
-    const course = courseTracks[currentIndex];
-
-    slide.classList.add("is-changing");
-    image.classList.add("is-changing");
+  const showNextCourse = () => {
+    title.classList.add("is-changing");
     window.setTimeout(() => {
-      category.textContent = course.category;
-      title.replaceChildren(
-        document.createTextNode(`${course.title} tutoring, tailored to `),
-        Object.assign(document.createElement("span"), {
-          className: "hero-highlight",
-          textContent: "your goals.",
-        }),
-      );
-      summary.textContent = course.summary;
-      subjects.replaceChildren(
-        ...course.subjects.slice(0, 3).map((subject) => {
-          const chip = document.createElement("span");
-          chip.textContent = subject;
-          return chip;
-        }),
-      );
-      exploreLink.href = `course-${course.slug}.html`;
-      exploreLink.setAttribute("aria-label", `Explore ${course.title} course`);
-      image.src = `images/${course.art}`;
-      image.alt = "";
-      visualLabel.textContent = `${course.title} learning`;
-      updateControls();
-      slide.classList.remove("is-changing");
-      image.classList.remove("is-changing");
-    }, 140);
+      currentIndex = (currentIndex + 1) % courseTracks.length;
+      title.textContent = courseTracks[currentIndex].title;
+      title.classList.remove("is-changing");
+    }, 180);
   };
 
-  const stopTimer = () => {
+  const updateTimer = () => {
     window.clearInterval(timer);
     timer = undefined;
+    if (reducedMotion.matches || document.hidden) return;
+    timer = window.setInterval(showNextCourse, 6000);
   };
 
-  const startTimer = () => {
-    stopTimer();
-    if (!autoplayEnabled || document.hidden) return;
-    timer = window.setInterval(() => showSlide(currentIndex + 1), 6000);
-  };
-
-  renderDots();
-  showSlide(0);
-  updateControls();
-
-  previous.addEventListener("click", () => {
-    showSlide(currentIndex - 1);
-    startTimer();
-  });
-  next.addEventListener("click", () => {
-    showSlide(currentIndex + 1);
-    startTimer();
-  });
-  toggle.addEventListener("click", () => {
-    autoplayEnabled = !autoplayEnabled;
-    updateControls();
-    startTimer();
-  });
-  document.addEventListener("visibilitychange", startTimer);
-  reducedMotion.addEventListener("change", (event) => {
-    if (event.matches) autoplayEnabled = false;
-    updateControls();
-    startTimer();
-  });
-  startTimer();
+  document.addEventListener("visibilitychange", updateTimer);
+  reducedMotion.addEventListener("change", updateTimer);
+  updateTimer();
 }
 
 document.querySelectorAll("form[data-demo-form]").forEach((form) => {

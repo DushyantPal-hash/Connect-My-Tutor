@@ -6,7 +6,7 @@ class SiteFooter extends HTMLElement {
         <div class="footer-grid">
           <div class="footer-brand-column">
             <a href="/" class="logo footer-brand">
-              <img src="images/logo/logo.webp" alt="Connect My Tutor Logo" class="logo-image">
+              <img src="images/logo/favicon.png" alt="Connect My Tutor Logo" class="logo-image">
               Connect My Tutor
             </a>
             <p>Thoughtful tutoring for brighter futures. Online and in-person learning, shaped around every student.</p>

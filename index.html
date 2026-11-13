@@ -24,59 +24,31 @@
     <!-- Hero -->
     <section class="hero application-hero home-hero">
         <div class="container">
-            <div class="hero-notice">
-                <span class="notice-dot" aria-hidden="true"></span>
-                <span>Online and home tuition for school, board exams and beyond</span>
-                <a href="#tuition-formats" class="arrow">Explore options <span aria-hidden="true">▶</span></a>
-            </div>
             <div class="hero-grid">
                 <div class="course-carousel" id="courseCarousel" aria-label="Featured courses">
-                    <div class="course-slide-copy" id="courseSlide" role="group" aria-roledescription="slide"
-                        aria-label="Course 1 of 11">
-                        <span class="eyebrow hero-location" id="courseCategory">International curriculum</span>
-                        <h1 id="courseTitle">Personal tutoring, tailored to <span class="hero-highlight">your
-                                course.</span></h1>
+                    <div class="course-slide-copy">
+                        <span class="eyebrow hero-location" id="courseCategory">Personalised learning</span>
+                        <h1>Where learning meets your goals</h1>
+                        <h2 class="hero-course-name" id="courseTitle">IB</h2>
                         <p id="courseSummary">Explore one-to-one support across school curricula and exam preparation.
                         </p>
-                        <div class="course-slide-subjects" id="courseSubjects" aria-label="Subjects in this course">
+                        <div class="hero-actions">
+                            <a href="course-ib.html" class="btn btn-primary arrow" id="courseExploreLink">
+                                <span id="courseExploreLabel">Find your tutor</span>
+                                <span aria-hidden="true">▶</span>
+                            </a>
                         </div>
+                        <p class="hero-seat-note">One-to-one support · Online and home tuition</p>
                         <div class="hero-trust-list" aria-label="Tutoring benefits">
                             <span><b aria-hidden="true">✓</b> One-to-one learning</span>
                             <span><b aria-hidden="true">✓</b> Flexible lesson formats</span>
                         </div>
-                        <div class="hero-actions">
-                            <a href="course-ib.html" class="btn btn-primary arrow" id="courseExploreLink">Explore course
-                                <span aria-hidden="true">▶</span>
-                            </a>
-                            <a href="for-parents.html" class="btn btn-outline">Find my tutor</a>
-                        </div>
-                        <div class="hero-stats">
-                            <div class="stat"><b>11 courses</b><span>Curricula &amp; exams</span></div>
-                            <div class="stat"><b>Flexible</b><span>Online or at home</span></div>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="hero-card home-hero-card">
-                            <img class="hero-student-art" id="courseHeroImage" src="images/academic-illustration.svg"
-                                alt="" />
-                        </div>
-                        <div class="float-chip chip-1"><span class="dot"></span><span id="courseVisualLabel">Personal
-                                learning</span></div>
-                        <div class="float-chip chip-2"><span class="dot"></span> Learn at your pace</div>
-                    </div>
-                    <div class="course-carousel-controls">
-                        <span class="course-carousel-count" id="courseSlideCount">01 <span>/ 11</span></span>
-                        <div class="course-carousel-dots" id="courseCarouselDots" aria-label="Choose a course"></div>
-                        <div class="course-carousel-buttons">
-                            <button class="course-carousel-toggle" id="courseCarouselToggle" type="button"
-                                aria-label="Pause automatic course slides" title="Pause automatic slides">❚❚
-                            </button>
-                            <button class="course-carousel-arrow" id="courseCarouselPrevious" type="button"
-                                aria-label="Previous course">◀
-                            </button>
-                            <button class="course-carousel-arrow" id="courseCarouselNext" type="button"
-                                aria-label="Next course">▶
-                            </button>
+                        <div class="course-slide-subjects" id="courseSubjects" aria-label="Subjects in this course">
+                            <span>Mathematics</span>
+                            <span>Physics</span>
+                            <span>Chemistry</span>
+                            <span>Biology</span>
+                            <span>English</span>
                         </div>
                     </div>
                 </div>
@@ -88,12 +60,11 @@
         <div class="container">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Find your learning path</span>
-                    <h2 class="section-title">Choose your academic track.</h2>
-                    <p class="section-sub">From school foundations to competitive exams, get focused guidance for the
-                        curriculum and goals that matter to you.</p>
+                    <span class="eyebrow">What we offer</span>
+                    <h2 class="section-title">One-to-one tutoring for every academic goal.</h2>
+                    <p class="section-sub">Explore support for JEE, NEET, IB, IGCSE, SAT, AP and more.</p>
                 </div>
-                <a href="courses.html" class="btn btn-outline-black arrow">View all courses
+                <a href="courses.html" class="btn btn-outline-white arrow">View all courses
                     <span aria-hidden="true">▶</span>
                 </a>
             </div>
@@ -178,6 +149,14 @@
             </div>
         </div>
     </section>
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee">
+            <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>English Literature</span>
+            <span>Computer Science</span><span>Biology</span><span>Economics</span><span>Music Theory</span>
+            <span>Test Prep</span><span>Languages</span>
+        </div>
+    </div>
     <!-- Tuition formats -->
     <section class="tuition-section" id="tuition-formats">
         <div class="container">
@@ -186,11 +165,10 @@
                     <span class="eyebrow">Learning that fits your life</span>
                     <h2 class="section-title">Choose how you want to learn.</h2>
                     <p class="section-sub">
-                        Get focused one-to-one support in the setting that works best for you and
-                        your family.
+                        Get focused online support with one-to-one lessons tailored to you.
                     </p>
                 </div>
-                <a href="for-parents.html" class="btn btn-outline-black arrow">Request tuition
+                <a href="for-parents.html" class="btn btn-outline-white arrow">Request tuition
                     <span aria-hidden="true">▶</span>
                 </a>
             </div>
@@ -202,8 +180,7 @@
                             <span class="course-type">Learn from anywhere</span>
                             <h3>Online tuition</h3>
                             <p>
-                                Meet your tutor online for convenient, one-to-one lessons from home or wherever you feel
-                                comfortable learning.
+                                Learn with a tutor from anywhere, with convenient scheduling and no travel.
                             </p>
                             <a class="course-link" href="for-parents.html">
                                 Request online tuition <span aria-hidden="true">▶</span>
@@ -211,34 +188,17 @@
                         </div>
                     </a>
                 </article>
-                <article class="tuition-card tuition-home">
+                <article class="tuition-card tuition-one-to-one">
                     <a href="for-parents.html">
-                        <img src="images/inside-images/home-page/home-tuition.webp" alt="" loading="lazy">
+                        <img src="images/academic-illustration.svg" alt="" loading="lazy">
                         <div class="tuition-card-content">
-                            <span class="course-type">Face-to-face support</span>
-                            <h3>Home tuition</h3>
+                            <span class="course-type">Personalized attention</span>
+                            <h3>Online 1-to-1</h3>
                             <p>
-                                Arrange in-person lessons at home, with a tutor and schedule that suit your location and
-                                learning goals.
+                                Get personal explanations, immediate feedback, and lessons paced around your goals.
                             </p>
                             <a class="course-link" href="for-parents.html">
-                                Request home tuition <span aria-hidden="true">▶</span>
-                            </a>
-                        </div>
-                    </a>
-                </article>
-                <article class="tuition-card tuition-flexible">
-                    <a href="for-parents.html">
-                        <img src="images/inside-images/home-page/flexible-tuition.webp" alt="" loading="lazy">
-                        <div class="tuition-card-content">
-                            <span class="course-type">Flexible learning</span>
-                            <h3>Online + home tuition</h3>
-                            <p>
-                                Prefer a mix? Tell us you’re open to both formats and discuss a flexible approach with
-                                your tutor.
-                            </p>
-                            <a class="course-link" href="for-parents.html">
-                                Explore both options <span aria-hidden="true">▶</span>
+                                Request one-to-one tuition <span aria-hidden="true">▶</span>
                             </a>
                         </div>
                     </a>
@@ -246,207 +206,105 @@
             </div>
         </div>
     </section>
-    <!-- Student and teacher forms -->
-    <section class="join-section">
+    <!-- Registration and tutor matching -->
+    <section class="join-section" id="get-started">
         <div class="container">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Your next step starts here</span>
-                    <h2 class="section-title">Learning or teaching? You belong here.</h2>
-                    <p class="section-sub">Tell us a little about yourself and we’ll help you get started.</p>
+                    <span class="eyebrow">Registration &amp; tutor matching</span>
+                    <h2 class="section-title">Register or hire a tutor.</h2>
+                    <p class="section-sub">Choose the path that fits you and we’ll help you take the next step.</p>
                 </div>
             </div>
             <div class="join-grid">
                 <article class="join-card join-student">
                     <span class="join-icon" aria-hidden="true">✦</span>
                     <div><span class="course-type">For students &amp; families</span>
-                        <h3>Find the support you need.</h3>
-                        <p>Share your class, subjects and goals so we can help you find a tutor who fits.</p>
+                        <h3>Hire a tutor for your child.</h3>
+                        <p>Share your subjects and goals so we can help you find the right one-to-one tutor.</p>
                         <a href="for-parents.html" class="btn btn-primary arrow">
-                            Fill in the student form <span aria-hidden="true">▶</span>
+                            For parents — hire a tutor <span aria-hidden="true">▶</span>
                         </a>
                     </div>
                 </article>
                 <article class="join-card join-teacher">
                     <span class="join-icon" aria-hidden="true">✎</span>
                     <div><span class="course-type">For teachers</span>
-                        <h3>Make a difference, one lesson at a time.</h3>
-                        <p>Tell us about your subjects, qualifications and teaching availability.</p>
+                        <h3>Teach with Connect My Tutor.</h3>
+                        <p>Tell us about your subjects, qualifications and availability to get started.</p>
                         <a href="for-tutors.html" class="btn btn-primary arrow">
-                            Fill in the teacher form <span aria-hidden="true">▶</span>
+                            For teachers — register as a tutor <span aria-hidden="true">▶</span>
                         </a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
-    <!-- Marquee -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-track" id="marquee">
-            <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>English Literature</span>
-            <span>Computer Science</span><span>Biology</span><span>Economics</span><span>Music Theory</span>
-            <span>Test Prep</span><span>Languages</span>
-        </div>
-    </div>
-    <!-- Features(Why choose us) -->
-    <section id="subjects">
+    <!-- Why Connect My Tutor -->
+    <section id="why-connect-my-tutor">
         <div class="container">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Why choose us</span>
-                    <h2 class="section-title">Tutoring, elevated to an art.</h2>
-                    <p class="section-sub">Every detail of Connect My Tutor is designed around one thing: remarkable
-                        learning outcomes.</p>
+                    <span class="eyebrow">The Connect My Tutor difference</span>
+                    <h2 class="section-title">Why Connect My Tutor?</h2>
+                    <p class="section-sub">Personalised one-to-one support to help every learner make progress.</p>
                 </div>
-                <a href="about.html" class="btn btn-outline-black arrow">Get started
-                    <span aria-hidden="true">▶</span>
-                </a>
             </div>
             <div class="features">
-                <div class="feature">
+                <article class="feature">
                     <div class="card-head">
                         <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 12 20 4M16 4h4v4" />
+                            </svg>
+                        </div>
+                        <h3>Personalized Learning</h3>
+                    </div>
+                    <p>One-to-one lessons shaped around your goals, pace, and learning style.</p>
+                </article>
+                <article class="feature">
+                    <div class="card-head">
+                        <div class="icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="12" cy="8" r="4" />
                                 <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
                             </svg>
                         </div>
-                        <h3>Hand-picked experts</h3>
+                        <h3>Expert Tutors</h3>
                     </div>
-                    <p>
-                        Only 1 in 12 applicants makes it through our rigorous vetting — subject tests, teaching demos
-                        and interviews.
-                    </p>
-                </div>
-                <div class="feature">
+                    <p>Learn with dedicated tutors who know their subjects and how to teach them.</p>
+                </article>
+                <article class="feature">
                     <div class="card-head">
                         <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
-                                <path
-                                    d="M12 21s-7-4.5-9.5-9C.8 8.5 3 5 6.5 5c2 0 3.7 1 5.5 3 1.8-2 3.5-3 5.5-3C21 5 23.2 8.5 21.5 12 19 16.5 12 21 12 21z" />
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="16" rx="2" />
+                                <path d="M16 3v4M8 3v4M3 10h18" />
                             </svg>
                         </div>
-                        <h3>Truly personal matching</h3>
+                        <h3>Flexible Schedule</h3>
                     </div>
-                    <p>
-                        Tell us your goals and learning style. We match you with a tutor who fits — and re-match free if
-                        it isn't right.
-                    </p>
-                </div>
-                <div class="feature">
+                    <p>Choose online or in-person sessions at times that work for you.</p>
+                </article>
+                <article class="feature">
                     <div class="card-head">
                         <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
-                                <rect x="3" y="4" width="18" height="14" rx="2" />
-                                <path d="M3 9h18M8 21h8" />
-                            </svg>
-                        </div>
-                        <h3>Online &amp; in-person</h3>
-                    </div>
-                    <p>
-                        Meet in our interactive online classroom or face-to-face. Flexible scheduling that works around
-                        your life.
-                    </p>
-                </div>
-                <div class="feature">
-                    <div class="card-head">
-                        <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M3 17l6-6 4 4 8-8" />
                                 <path d="M15 7h6v6" />
                             </svg>
                         </div>
-                        <h3>Progress you can see</h3>
+                        <h3>Better Concepts, Better Results</h3>
                     </div>
-                    <p>
-                        Detailed session notes and milestone reports after every lesson, so parents and students always
-                        know where things stand.
-                    </p>
-                </div>
-                <div class="feature">
-                    <div class="card-head">
-                        <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
-                                <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" />
-                                <path d="M9 12l2 2 4-4" />
-                            </svg>
-                        </div>
-                        <h3>Safe &amp; trusted</h3>
-                    </div>
-                    <p>
-                        Background checks, verified credentials and secure in-platform payments. Your safety is
-                        non-negotiable.
-                    </p>
-                </div>
-                <div class="feature">
-                    <div class="card-head">
-                        <div class="icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.7">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="M12 7v5l3 3" />
-                            </svg>
-                        </div>
-                        <h3>First lesson guarantee</h3>
-                    </div>
-                    <p>
-                        Love your first lesson or it's free. No contracts, no hidden fees — cancel anytime with a single
-                        click.
-                    </p>
-                </div>
+                    <p>Build clear understanding, confidence, and lasting progress in every lesson.</p>
+                </article>
             </div>
-        </div>
-    </section>
-    <!-- How it works -->
-    <section class="how" id="how">
-        <div class="container">
-            <span class="eyebrow">Simple by design</span>
-            <h2 class="section-title">Three steps to your best results.</h2>
-            <p class="section-sub">From first message to first lesson in under 48 hours, on average.</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="card-head">
-                        <div class="step-num">01</div>
-                        <h3>Tell us your goals</h3>
-                    </div>
-                    <p>Share your subject, level, availability and what you want to achieve — it takes two minutes.</p>
-                </div>
-                <div class="step">
-                    <div class="card-head">
-                        <div class="step-num">02</div>
-                        <h3>Meet your match</h3>
-                    </div>
-                    <p>We introduce you to a hand-selected tutor. Chat first, and only book when it feels right.</p>
-                </div>
-                <div class="step">
-                    <div class="card-head">
-                        <div class="step-num">03</div>
-                        <h3>Learn &amp; excel</h3>
-                    </div>
-                    <p>Book lessons on your schedule and watch your confidence — and your grades — climb.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Tutors -->
-    <section id="tutors">
-        <div class="container">
-            <div class="section-head">
-                <div>
-                    <span class="eyebrow">Featured tutors</span>
-                    <h2 class="section-title">Meet a few of our favourites.</h2>
-                    <p class="section-sub">Thousands of verified tutors across every subject and level.</p>
-                </div>
-                <a href="tutors.html" class="btn btn-outline-black arrow">View all tutors
-                    <span aria-hidden="true">▶</span>
-                </a>
-            </div>
-            <tutor-catalog></tutor-catalog>
         </div>
     </section>
     <!-- Testimonials -->
@@ -454,8 +312,8 @@
         <div class="container">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Student stories</span>
-                    <h2 class="section-title">Results that speak for themselves.</h2>
+                    <span class="eyebrow">Testimonials</span>
+                    <h2 class="section-title">What families and students say.</h2>
                 </div>
             </div>
             <div class="quotes">
@@ -489,22 +347,27 @@
             </div>
         </div>
     </section>
-    <!-- CTA -->
-    <section>
+    <!-- Tutors -->
+    <section id="tutors">
         <div class="container">
-            <div class="cta-band">
-                <h2>Your first lesson is on us.</h2>
-                <p>Tell us what you want to achieve and we'll match you with a tutor you'll love — or you pay nothing.
-                </p>
-                <a href="tutors.html" class="btn btn-primary">Find my tutor</a>
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">Featured tutors</span>
+                    <h2 class="section-title">Meet a few of our favourites.</h2>
+                    <p class="section-sub">Thousands of verified tutors across every subject and level.</p>
+                </div>
+                <a href="tutors.html" class="btn btn-outline-white arrow">View all tutors
+                    <span aria-hidden="true">▶</span>
+                </a>
             </div>
+            <tutor-catalog></tutor-catalog>
         </div>
     </section>
     <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="container contact-grid">
             <div class="contact-info">
-                <span class="eyebrow">Get in touch</span>
+                <span class="eyebrow">Contact us</span>
                 <h2 class="section-title">Let's find your perfect tutor.</h2>
                 <p>Fill in the form and our matching team will reach out within one working day. Prefer to talk? We're
                     here.</p>

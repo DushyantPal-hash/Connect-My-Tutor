@@ -4,23 +4,28 @@
 
 :root {
     /* Colors */
-    --ink: #17283e;
-    --paper: #fbfdff;
-    --cream: #eef7fc;
-    --gold: #DF812E;
-    --gold-soft: #DF812E6a;
-    --tab-background: #df812e41;
-    --card-background: rgb(243 242 255);
-    --sage: #288875;
-    --line: #dceaf2;
-    --text: #3e526a;
-    --muted: #72849a;
+    --purple: #300657;
+    --purple-light: #4a1978;
+    --blue: #155eaa;
+    --yellow: #f3e52b;
+    --yellow-light: #cbc02a;
+    --ink: #300657;
+    --paper: #ffffff;
+    --cream: #f5f0fa;
+    --gold: #3d116b;
+    --gold-soft: #54247d;
+    --tab-background: #fff5a6;
+    --card-background: #f7f3fb;
+    --sage: #155eaa;
+    --line: #e4dceb;
+    --text: #352a40;
+    --muted: #71677c;
 
     /* Shape */
     --radius: 14px;
 
     /* Elevation */
-    --shadow: 0 20px 50px -20px rgba(31, 72, 105, .2);
+    --shadow: 0 20px 50px -20px rgba(48, 6, 87, .22);
 
     /* Typography */
     --serif: 'DM Serif Display', Georgia, serif;

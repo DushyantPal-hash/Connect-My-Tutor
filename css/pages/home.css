@@ -24,6 +24,13 @@
     background: rgba(255, 255, 255, .94);
     box-shadow: 0 12px 36px rgba(49, 46, 39, .09);
     backdrop-filter: blur(16px);
+    transition: height .3s ease, margin .3s ease, box-shadow .3s ease;
+}
+
+.home-page #header.scrolled .nav {
+    height: 72px;
+    margin-top: 8px;
+    box-shadow: 0 10px 30px rgba(49, 46, 39, .13);
 }
 
 /* Home Hero */
@@ -460,4 +467,126 @@
 
 .arrow:hover span {
     transform: translateX(4px);
+}
+
+/* A warmer, more cohesive palette across the home page */
+.home-page .courses-section,
+.home-page #subjects,
+.home-page .join-section {
+    background: #fbf8f2;
+}
+
+.home-page .tuition-section,
+.home-page .testimonials {
+    background: linear-gradient(145deg, #f3f5ec 0%, #f8f2e9 100%);
+}
+
+.home-page .how {
+    background: linear-gradient(130deg, #f5f0e7 0%, #f8f5ed 55%, #eef4ed 100%);
+}
+
+.home-page .marquee {
+    border-color: #e8dfd1;
+    background: #f3eee4;
+}
+
+.home-page .marquee-track span::before {
+    color: #d98736;
+}
+
+.home-page .feature {
+    border-color: #ece4d8;
+    box-shadow: 0 8px 22px rgba(87, 71, 48, .045);
+}
+
+.home-page .feature .icon {
+    background: #f8eddd;
+    color: #c9772d;
+}
+
+.home-page .step {
+    border-color: #e9dfd0;
+    box-shadow: 0 8px 26px rgba(87, 71, 48, .05);
+}
+
+.home-page .step:hover {
+    border-color: #d9b789;
+}
+
+.home-page .join-card {
+    border-color: #e9dfd0;
+    background: linear-gradient(135deg, #f5f1e8, #fffdfa);
+}
+
+.home-page .join-teacher {
+    background: linear-gradient(135deg, #edf3e9, #fffdfa);
+}
+
+.home-page .join-icon {
+    background: #f3e7d4;
+    color: #bd722e;
+}
+
+.home-page .join-teacher .join-icon {
+    background: #e4eddf;
+    color: #4a8069;
+}
+
+.home-page .quote {
+    border-color: #e9dfd0;
+    box-shadow: 0 14px 36px rgba(87, 71, 48, .06);
+}
+
+.home-page .quote::before {
+    color: #f0dfc8;
+}
+
+.home-page .cta-band {
+    border-color: #ebdfcd;
+    background:
+        radial-gradient(circle at 85% 0%, rgba(226, 179, 116, .28), transparent 35%),
+        linear-gradient(135deg, #f8f0e3 0%, #f1f3e9 100%);
+}
+
+.home-page .contact-grid {
+    border: 1px solid #e9dfd0;
+    background: linear-gradient(135deg, #f8f1e7, #f0f3e9);
+}
+
+.home-page .contact-line .icon {
+    background: #f3e7d4;
+}
+
+/* Scroll reveals are enabled only when motion is supported and requested */
+.home-page.has-scroll-reveal .scroll-reveal {
+    opacity: 0;
+    translate: 0 20px;
+    transition:
+        opacity .65s ease var(--reveal-delay, 0ms),
+        translate .65s cubic-bezier(.2, .7, .2, 1) var(--reveal-delay, 0ms);
+}
+
+.home-page.has-scroll-reveal .scroll-reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+@media (max-width: 640px) {
+    .home-page #header.scrolled .nav {
+        height: 62px;
+        margin-top: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-page #header .nav,
+    .home-page.has-scroll-reveal .scroll-reveal {
+        transition: none;
+    }
+
+    .home-page.has-scroll-reveal .scroll-reveal {
+        opacity: 1;
+        translate: none;
+    }
 }

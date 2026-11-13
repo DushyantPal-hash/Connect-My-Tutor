@@ -19,7 +19,7 @@
 
 .application-hero h1,
 .application-hero p {
-    color: var(--ink);
+    color: var(--paper);
 }
 
 .application-hero h1 {
@@ -29,11 +29,11 @@
 .application-hero p {
     max-width: 700px;
     margin-top: .8rem;
-    color: var(--text);
+    color: var(--cream);
 }
 
 .application-hero .eyebrow {
-    color: #DF812E;
+    color: var(--yellow);
 }
 
 .application-panel {
