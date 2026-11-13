@@ -32,5 +32,8 @@
 @import url('./pages/application.css');
 @import url('./pages/home.css');
 
-/* Utilities (must be last) */
+/* Utilities */
 @import url('./utilities/responsive.css');
+
+/* Shared brand palette (must be last) */
+@import url('./theme.css');
