@@ -27,6 +27,11 @@ footer .logo-mark {
 .footer-brand {
     margin-bottom: .8rem;
     display: inline-flex;
+    max-width: 100%;
+}
+
+.footer-brand .logo-image {
+    width: clamp(144px, 18vw, 184px);
 }
 
 .footer-brand .logo-mark {

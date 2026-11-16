@@ -28,7 +28,7 @@
 }
 
 .course-card:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     box-shadow: 0 16px 30px rgba(37, 83, 112, .12);
 }
 
@@ -120,8 +120,13 @@
     transition: transform .2s;
 }
 
+.course-card:hover .course-link {
+    color: var(--yellow-light);
+}
+
 .course-card:hover .course-link span {
     transform: translateX(4px);
+    color: var(--yellow-light);
 }
 
 .course-tile-art {

@@ -483,11 +483,6 @@ body.home-page #header .nav-links a {
     color: #fff;
 }
 
-body.home-page #header .nav-cta .btn-outline {
-    border-color: rgba(255, 255, 255, .68);
-    color: #fff;
-}
-
 body.home-page #header .nav-cta .btn-primary {
     background: var(--yellow);
     color: var(--purple);
@@ -502,6 +497,7 @@ body.home-page .hero.application-hero {
     padding: 7rem 0 2.25rem;
     background-color: var(--purple);
     background-image: none;
+    height: 100dvh;
 }
 
 body.home-page .hero.application-hero::before {
@@ -523,7 +519,7 @@ body.home-page .hero.application-hero::after {
     z-index: 0;
     inset: 0;
     display: block;
-    background: linear-gradient(90deg, rgba(38, 5, 68, .97) 0%, rgba(38, 5, 68, .88) 46%, rgba(38, 5, 68, 0.366) 100%);
+    background: linear-gradient(90deg, rgba(38, 5, 68, 0.562) 0%, rgba(38, 5, 68, 0.638) 46%, rgba(38, 5, 68, 0.2) 100%);
     content: "";
     pointer-events: none;
 }
@@ -569,7 +565,7 @@ body.home-page .course-slide-copy h1 {
 body.home-page .hero-course-name {
     max-width: 100%;
     min-height: 1.08em;
-    margin: .35rem 0 0;
+    margin: 1.2rem 0 0;
     color: var(--yellow);
     font-family: var(--sans);
     font-size: clamp(3rem, 7vw, 5rem);
@@ -580,7 +576,15 @@ body.home-page .hero-course-name {
     transition: opacity .18s ease, transform .18s ease;
 }
 
-body.home-page .hero-course-name.is-changing {
+body.home-page .course-slide-subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+body.home-page .hero-course-name.is-changing,
+body.home-page .course-slide-subjects.is-changing {
     opacity: 0;
     transform: translateY(-.35em);
 }
@@ -594,10 +598,12 @@ body.home-page .hero-highlight::after {
 }
 
 body.home-page .hero.application-hero .hero-location {
-    margin-bottom: 1.2rem;
+    /* margin-bottom: 1.2rem; */
     border-color: rgba(243, 229, 43, .48);
     background: rgba(255, 255, 255, .08);
     color: var(--yellow);
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 body.home-page .course-slide-copy>p:not(.hero-seat-note) {
@@ -628,7 +634,7 @@ body.home-page .hero-actions .btn-primary:hover {
 }
 
 body.home-page .hero-seat-note {
-    margin: .75rem 0 0;
+    margin: 0;
     color: #d7cce3;
     font-size: .82rem;
     font-weight: 600;
@@ -639,11 +645,18 @@ body.home-page .course-slide-subjects {
     display: grid;
     width: 100%;
     min-height: 0;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: .75rem;
-    margin: 2rem auto 0;
-    padding-top: .75rem;
-    border-top: 1px solid rgba(255, 255, 255, .25);
+    /* margin: 2rem auto 0; */
+    /* padding-top: .75rem; */
+    /* border-top: 1px solid rgba(255, 255, 255, .25); */
+}
+
+.border {
+    border-top: 2px solid rgba(255, 255, 255, .25);
+    border-bottom: 2px solid rgba(255, 255, 255, .25);
+    min-width: 250px;
+    margin-top: 10px;
 }
 
 body.home-page .course-slide-subjects span {
@@ -652,10 +665,15 @@ body.home-page .course-slide-subjects span {
     padding: .65rem .5rem;
     border: 0;
     border-radius: 0;
-    border-bottom: 2px solid rgba(255, 255, 255, .25);
+    /* border-bottom: 2px solid rgba(255, 255, 255, .25); */
     background: transparent;
-    color: #fff;
-    font-size: .87rem;
+    color: var(--yellow);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+body.home-page .course-slide-subjects span[hidden] {
+    display: none;
 }
 
 body.home-page .course-carousel-controls {
@@ -746,14 +764,14 @@ body.home-page .course-carousel-dot:focus-visible {
     }
 
     body.home-page .course-slide-subjects {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
         gap: .35rem .7rem;
-        margin-top: 1.5rem;
+        /* margin-top: 1.5rem; */
     }
 
     body.home-page .course-slide-subjects span {
         min-height: 38px;
-        font-size: .78rem;
+        font-size: 1.1rem;
     }
 
     body.home-page .course-carousel-controls {
