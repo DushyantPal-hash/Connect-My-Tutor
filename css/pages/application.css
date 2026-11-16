@@ -14,7 +14,27 @@
 }
 
 .application-hero::before {
-    display: none;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+    background-image: url("../images/inside-images/home-page/student-laptop.webp");
+    background-position: center 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    opacity: .58;
+    pointer-events: none;
+}
+
+.application-hero::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: block;
+    background: linear-gradient(90deg, rgba(38, 5, 68, 0.562) 0%, rgba(38, 5, 68, 0.638) 46%, rgba(38, 5, 68, 0.2) 100%);
+    content: "";
+    pointer-events: none;
 }
 
 .application-hero h1,

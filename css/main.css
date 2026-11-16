@@ -35,5 +35,8 @@
 /* Utilities */
 @import url('./utilities/responsive.css');
 
-/* Shared brand palette (must be last) */
+/* Shared brand palette */
 @import url('./theme.css');
+
+/* Course-specific pages */
+@import url('./pages/course-track.css');
