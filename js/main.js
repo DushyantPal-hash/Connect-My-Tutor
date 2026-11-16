@@ -76,21 +76,34 @@ if (marquee) {
 const courseCarousel = document.getElementById("courseCarousel");
 if (courseCarousel) {
   const title = document.getElementById("courseTitle");
+  const subjects = document.getElementById("courseSubjects");
+  const subjectLabels = subjects.querySelectorAll("span");
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   let currentIndex = 0;
+  let currentSubjectIndex = 0;
   let timer;
+  const updateSubjects = () => {
+    subjectLabels.forEach((label, index) => {
+      label.hidden = !reducedMotion.matches && index !== currentSubjectIndex;
+    });
+  };
   const showNextCourse = () => {
     title.classList.add("is-changing");
+    subjects.classList.add("is-changing");
     window.setTimeout(() => {
       currentIndex = (currentIndex + 1) % courseTracks.length;
+      currentSubjectIndex = (currentSubjectIndex + 1) % subjectLabels.length;
       title.textContent = courseTracks[currentIndex].title;
+      updateSubjects();
       title.classList.remove("is-changing");
+      subjects.classList.remove("is-changing");
     }, 180);
   };
 
   const updateTimer = () => {
     window.clearInterval(timer);
     timer = undefined;
+    updateSubjects();
     if (reducedMotion.matches || document.hidden) return;
     timer = window.setInterval(showNextCourse, 2000);
   };

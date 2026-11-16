@@ -32,6 +32,7 @@ body.application-page header {
     display: flex;
     align-items: center;
     gap: .6rem;
+    min-width: 0;
     font-family: var(--serif);
     font-size: 1.35rem;
     font-weight: 700;
@@ -51,8 +52,11 @@ body.application-page header {
 }
 
 .logo-image {
-    width: 45px;
-    height: 45px;
+    display: block;
+    width: clamp(128px, 13vw, 168px);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .nav-links {

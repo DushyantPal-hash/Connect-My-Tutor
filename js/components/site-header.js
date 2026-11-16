@@ -4,8 +4,7 @@ class SiteHeader extends HTMLElement {
       <header id="header">
         <div class="container nav">
           <a href="/" class="logo">
-          <img src="images/logo/favicon.png" alt="Connect My Tutor Logo" class="logo-image">
-          Connect My Tutor
+            <img src="images/logo/finnal-logo.svg" alt="Connect My Tutor" class="logo-image" width="164" height="50">
           </a>
           <ul class="nav-links" id="navLinks">
             <li><a href="about.html">About</a></li>

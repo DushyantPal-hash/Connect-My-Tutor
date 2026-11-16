@@ -113,6 +113,14 @@
 @media(max-width: 640px) {
 
     /* Nav */
+    .logo-image {
+        width: clamp(120px, 43vw, 164px);
+    }
+
+    .footer-brand .logo-image {
+        width: min(100%, 168px);
+    }
+
     .nav-links,
     .nav-cta .btn-outline,
     .nav-cta .btn-primary {
@@ -307,7 +315,7 @@
     .home-page .hero-trust-list span {
         min-height: 34px;
         padding: .35rem .55rem;
-        font-size: .66rem;
+        font-size: 1.1rem;
     }
 
     .home-page .hero-stats {

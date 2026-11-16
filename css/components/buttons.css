@@ -52,8 +52,8 @@
 }
 
 .btn-outline-white:hover {
-    border-color: var(--gold-soft);
-    color: var(--gold-soft);
+    border-color: var(--yellow-light);
+    color: var(--yellow-light);
     transform: translateY(-2px);
 }
 
