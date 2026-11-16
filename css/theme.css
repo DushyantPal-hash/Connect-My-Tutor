@@ -509,7 +509,7 @@ body.home-page .hero.application-hero::before {
     z-index: 0;
     inset: 0;
     display: block;
-    background-image: url("../images/inside-images/home-page/student-laptop.jpg");
+    background-image: url("../images/inside-images/home-page/student-laptop.webp");
     background-position: center 45%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -638,9 +638,8 @@ body.home-page .hero-seat-note {
 body.home-page .course-slide-subjects {
     display: grid;
     width: 100%;
-    max-width: 1050px;
     min-height: 0;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: .75rem;
     margin: 2rem auto 0;
     padding-top: .75rem;

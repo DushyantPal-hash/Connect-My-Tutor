@@ -1,5 +1,31 @@
 export const courseTracks = [
   {
+    slug: "jee",
+    title: "JEE",
+    category: "Indian competitive exams",
+    summary: "Master Physics, Chemistry and Mathematics concepts for JEE.",
+    description:
+      "Prepare for JEE with a strong foundation in core concepts and a deliberate approach to problem solving. One-to-one support can help you identify gaps and practise challenging questions.",
+    subjects: ["Physics", "Chemistry", "Mathematics"],
+    focus:
+      "Concept mastery, guided problem solving, revision and mock-test review.",
+    art: "/inside-images/courses/jee.webp",
+    related: ["neet", "foundation", "boardprep"],
+  },
+  {
+    slug: "neet",
+    title: "NEET",
+    category: "Indian competitive exams",
+    summary: "Focused preparation in Biology, Chemistry and Physics.",
+    description:
+      "Prepare for NEET with clear explanations, topic-by-topic revision and practice that builds confidence. Focus your lessons on the subjects and concepts where you need the most support.",
+    subjects: ["Biology", "Chemistry", "Physics"],
+    focus:
+      "Concept review, question practice, revision planning and exam readiness.",
+    art: "/inside-images/courses/neet.webp",
+    related: ["jee", "foundation", "boardprep"],
+  },
+  {
     slug: "ib",
     title: "IB",
     category: "International curriculum",
@@ -55,20 +81,6 @@ export const courseTracks = [
     related: ["act", "aps", "ib"],
   },
   {
-    slug: "act",
-    title: "ACT",
-    category: "Global test prep",
-    summary:
-      "Structured preparation for ACT subjects, timing and test strategy.",
-    description:
-      "Build confidence across ACT sections with tailored tutoring and regular practice. Your learning plan can focus on the subjects, question types and timing goals that need the most attention.",
-    subjects: ["English", "Math", "Reading", "Science"],
-    focus:
-      "Section-by-section practice, accuracy, pacing and test-day readiness.",
-    art: "/inside-images/courses/act.webp",
-    related: ["sat", "aps", "ib"],
-  },
-  {
     slug: "aps",
     title: "APs",
     category: "Global test prep",
@@ -87,6 +99,20 @@ export const courseTracks = [
       "Course concepts, free-response practice, revision and exam preparation.",
     art: "/inside-images/courses/ap.webp",
     related: ["sat", "act", "ib"],
+  },
+  {
+    slug: "act",
+    title: "ACT",
+    category: "Global test prep",
+    summary:
+      "Structured preparation for ACT subjects, timing and test strategy.",
+    description:
+      "Build confidence across ACT sections with tailored tutoring and regular practice. Your learning plan can focus on the subjects, question types and timing goals that need the most attention.",
+    subjects: ["English", "Math", "Reading", "Science"],
+    focus:
+      "Section-by-section practice, accuracy, pacing and test-day readiness.",
+    art: "/inside-images/courses/act.webp",
+    related: ["sat", "aps", "ib"],
   },
   {
     slug: "aqa",
@@ -113,32 +139,6 @@ export const courseTracks = [
       "Clear explanations, exam-question practice and structured revision.",
     art: "/inside-images/courses/pearson.webp",
     related: ["aqa", "igcse", "ib"],
-  },
-  {
-    slug: "jee",
-    title: "JEE",
-    category: "Indian competitive exams",
-    summary: "Master Physics, Chemistry and Mathematics concepts for JEE.",
-    description:
-      "Prepare for JEE with a strong foundation in core concepts and a deliberate approach to problem solving. One-to-one support can help you identify gaps and practise challenging questions.",
-    subjects: ["Physics", "Chemistry", "Mathematics"],
-    focus:
-      "Concept mastery, guided problem solving, revision and mock-test review.",
-    art: "/inside-images/courses/jee.webp",
-    related: ["neet", "foundation", "boardprep"],
-  },
-  {
-    slug: "neet",
-    title: "NEET",
-    category: "Indian competitive exams",
-    summary: "Focused preparation in Biology, Chemistry and Physics.",
-    description:
-      "Prepare for NEET with clear explanations, topic-by-topic revision and practice that builds confidence. Focus your lessons on the subjects and concepts where you need the most support.",
-    subjects: ["Biology", "Chemistry", "Physics"],
-    focus:
-      "Concept review, question practice, revision planning and exam readiness.",
-    art: "/inside-images/courses/neet.webp",
-    related: ["jee", "foundation", "boardprep"],
   },
   {
     slug: "foundation",
