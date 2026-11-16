@@ -92,7 +92,7 @@ if (courseCarousel) {
     window.clearInterval(timer);
     timer = undefined;
     if (reducedMotion.matches || document.hidden) return;
-    timer = window.setInterval(showNextCourse, 6000);
+    timer = window.setInterval(showNextCourse, 2000);
   };
 
   document.addEventListener("visibilitychange", updateTimer);
