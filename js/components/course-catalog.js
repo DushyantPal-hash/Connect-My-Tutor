@@ -2,7 +2,9 @@ import { courseTracks } from "../course-data.js";
 
 class CourseCatalog extends HTMLElement {
   connectedCallback() {
-    const categories = [...new Set(courseTracks.map((course) => course.category))];
+    const categories = [
+      ...new Set(courseTracks.map((course) => course.category)),
+    ];
 
     this.innerHTML = `
       ${categories
@@ -16,7 +18,7 @@ class CourseCatalog extends HTMLElement {
               .map(
                 (course) => `
               <a class="course-card course-directory-card" href="course-${course.slug}.html">
-                <img class="course-card-image" src="images/${course.art}" alt="" loading="lazy">
+                <img class="course-card-image" src="${course.art}" alt="" loading="lazy">
                 <span class="course-type">${course.category}</span>
                 <h2>${course.title}</h2>
                 <p>${course.summary}</p>

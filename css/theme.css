@@ -655,7 +655,7 @@ body.home-page .course-slide-subjects {
 .border {
     border-top: 2px solid rgba(255, 255, 255, .25);
     border-bottom: 2px solid rgba(255, 255, 255, .25);
-    min-width: 250px;
+    min-width: 550px;
     margin-top: 10px;
 }
 
@@ -668,7 +668,7 @@ body.home-page .course-slide-subjects span {
     /* border-bottom: 2px solid rgba(255, 255, 255, .25); */
     background: transparent;
     color: var(--yellow);
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     font-weight: 800;
 }
 

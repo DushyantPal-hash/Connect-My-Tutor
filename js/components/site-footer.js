@@ -44,7 +44,6 @@ class SiteFooter extends HTMLElement {
             <ul>
               <a href="courses.html"><li>All courses</li></a>
               <a href="for-parents.html"><li>Student enquiry form</li></a>
-              <a href="course-foundation.html"><li>Foundation</li></a>
               <a href="course-boardprep.html"><li>BoardPrep</li></a>
               <a href="for-parents.html"><li>Online courses</li></a>
             </ul>
@@ -54,16 +53,13 @@ class SiteFooter extends HTMLElement {
             <ul>
               <a href="course-ib.html"><li>IB</li></a>
               <a href="course-igcse.html"><li>IGCSE</li></a>
-              <a href="course-aqa.html"><li>AQA</li></a>
-              <a href="course-pearson-edexcel.html"><li>Pearson Edexcel</li></a>
+              <a href="contact.html"><li>Pearson Edexcel</li></a>
             </ul>
           </div>
           <div>
             <h4>Exam preparation</h4>
             <ul>
               <a href="course-sat.html"><li>SAT</li></a>
-              <a href="course-act.html"><li>ACT</li></a>
-              <a href="course-aps.html"><li>APs</li></a>
               <a href="course-jee.html"><li>JEE</li></a>
               <a href="course-neet.html"><li>NEET</li></a>
             </ul>

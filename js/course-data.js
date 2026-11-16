@@ -9,8 +9,14 @@ export const courseTracks = [
     subjects: ["Physics", "Chemistry", "Mathematics"],
     focus:
       "Concept mastery, guided problem solving, revision and mock-test review.",
-    art: "/inside-images/courses/jee.webp",
-    related: ["neet", "foundation", "boardprep"],
+    art: "images/inside-images/courses/jee.webp", // Removed the leading slash here too to match your folder structure
+    heroLabel: "JEE Main & Advanced",
+    heroTags: ["JEE Mains", "JEE Advance"],
+    classTags: ["Class 11", "Class 12"],
+    mentorLabel: "IITian Mentors",
+    mentorshipBenefit: "Direct Mentorship from IITians",
+    preparationBenefit: "Focused JEE Main & Advanced Preparation",
+    courseheroimage: "/images/inside-images/courses/banner/jee-students.webp",
   },
   {
     slug: "neet",
@@ -22,8 +28,14 @@ export const courseTracks = [
     subjects: ["Biology", "Chemistry", "Physics"],
     focus:
       "Concept review, question practice, revision planning and exam readiness.",
-    art: "/inside-images/courses/neet.webp",
-    related: ["jee", "foundation", "boardprep"],
+    art: "images/inside-images/courses/neet.webp",
+    heroLabel: "NEET UG",
+    heroTags: ["NEET UG"],
+    classTags: ["Class 11", "Class 12"],
+    mentorLabel: "NEET Subject Experts",
+    mentorshipBenefit: "Direct Mentorship from NEET Subject Experts",
+    preparationBenefit: "Focused NEET Preparation",
+    courseheroimage: "/images/inside-images/courses/banner/neet-students.webp",
   },
   {
     slug: "ib",
@@ -43,8 +55,14 @@ export const courseTracks = [
     ],
     focus:
       "Subject understanding, coursework planning, revision strategies and exam practice.",
-    art: "/inside-images/courses/ib.webp",
-    related: ["igcse", "aqa", "pearson-edexcel"],
+    art: "images/inside-images/courses/ib.webp",
+    heroLabel: "International Baccalaureate",
+    heroTags: ["IB Diploma Programme"],
+    classTags: [],
+    mentorLabel: "IB Subject Experts",
+    mentorshipBenefit: "Direct Mentorship from IB Subject Experts",
+    preparationBenefit: "Focused IB Curriculum Support",
+    courseheroimage: "/images/inside-images/courses/banner/ib-students.webp",
   },
   {
     slug: "igcse",
@@ -64,8 +82,14 @@ export const courseTracks = [
     ],
     focus:
       "Syllabus-based learning, topic review, past-paper practice and exam confidence.",
-    art: "/inside-images/courses/igcse.webp",
-    related: ["ib", "aqa", "pearson-edexcel"],
+    art: "images/inside-images/courses/igcse.webp",
+    heroLabel: "Cambridge IGCSE",
+    heroTags: ["Cambridge IGCSE"],
+    classTags: [],
+    mentorLabel: "IGCSE Subject Experts",
+    mentorshipBenefit: "Direct Mentorship from IGCSE Subject Experts",
+    preparationBenefit: "Focused IGCSE Preparation",
+    courseheroimage: "/images/inside-images/courses/banner/IGCSE-students.webp",
   },
   {
     slug: "sat",
@@ -77,81 +101,14 @@ export const courseTracks = [
     subjects: ["Math", "Reading and Writing"],
     focus:
       "Diagnostic review, targeted practice, pacing and a consistent study routine.",
-    art: "/inside-images/courses/sat.webp",
-    related: ["act", "aps", "ib"],
-  },
-  {
-    slug: "aps",
-    title: "APs",
-    category: "Global test prep",
-    summary: "Advanced learning across STEM, humanities and more.",
-    description:
-      "Get subject-specific support for Advanced Placement courses. Strengthen core concepts throughout the year and prepare for AP assessments with a tutor matched to your subject.",
-    subjects: [
-      "Calculus",
-      "Biology",
-      "Chemistry",
-      "Physics",
-      "English",
-      "Economics",
-    ],
-    focus:
-      "Course concepts, free-response practice, revision and exam preparation.",
-    art: "/inside-images/courses/ap.webp",
-    related: ["sat", "act", "ib"],
-  },
-  {
-    slug: "act",
-    title: "ACT",
-    category: "Global test prep",
-    summary:
-      "Structured preparation for ACT subjects, timing and test strategy.",
-    description:
-      "Build confidence across ACT sections with tailored tutoring and regular practice. Your learning plan can focus on the subjects, question types and timing goals that need the most attention.",
-    subjects: ["English", "Math", "Reading", "Science"],
-    focus:
-      "Section-by-section practice, accuracy, pacing and test-day readiness.",
-    art: "/inside-images/courses/act.webp",
-    related: ["sat", "aps", "ib"],
-  },
-  {
-    slug: "aqa",
-    title: "AQA",
-    category: "International curriculum",
-    summary: "Subject-specific support, revision and exam confidence.",
-    description:
-      "Make steady progress through AQA topics with lessons tailored to your course and current priorities. Ask questions, practise applying ideas and build confidence for assessments.",
-    subjects: ["Mathematics", "Biology", "Chemistry", "Physics", "English"],
-    focus:
-      "Topic teaching, assessment practice, revision planning and subject confidence.",
-    art: "/inside-images/courses/aqa.webp",
-    related: ["igcse", "pearson-edexcel", "ib"],
-  },
-  {
-    slug: "pearson-edexcel",
-    title: "Pearson Edexcel",
-    category: "International curriculum",
-    summary: "Strengthen understanding and practical exam skills.",
-    description:
-      "Get focused support for Pearson Edexcel courses, from working through difficult topics to practising exam questions. Your tutor can adapt each lesson to your course and pace.",
-    subjects: ["Mathematics", "Biology", "Chemistry", "Physics", "English"],
-    focus:
-      "Clear explanations, exam-question practice and structured revision.",
-    art: "/inside-images/courses/pearson.webp",
-    related: ["aqa", "igcse", "ib"],
-  },
-  {
-    slug: "foundation",
-    title: "Foundation",
-    category: "School foundation",
-    summary: "Build strong fundamentals and lasting confidence.",
-    description:
-      "Develop a secure understanding of essential school topics before moving on to more advanced work. Lessons are paced to the learner and encourage curiosity, confidence and good learning habits.",
-    subjects: ["Mathematics", "English", "Science"],
-    focus:
-      "Core skills, clear explanations, confidence and a positive learning routine.",
-    art: "/inside-images/courses/foundation.webp",
-    related: ["boardprep", "jee", "neet"],
+    art: "images/inside-images/courses/sat.webp",
+    heroLabel: "SAT Preparation",
+    heroTags: ["SAT Math", "Reading & Writing"],
+    classTags: [],
+    mentorLabel: "SAT Subject Experts",
+    mentorshipBenefit: "Direct Mentorship from SAT Subject Experts",
+    preparationBenefit: "Focused SAT Preparation",
+    courseheroimage: "/images/inside-images/courses/banner/sat-students.webp",
   },
   {
     slug: "boardprep",
@@ -163,7 +120,14 @@ export const courseTracks = [
     subjects: ["Mathematics", "Physics", "Chemistry", "Biology", "English"],
     focus:
       "Syllabus review, exam-style questions, revision plans and confidence.",
-    art: "/inside-images/courses/board.webp",
-    related: ["foundation", "jee", "neet"],
+    art: "images/inside-images/courses/board.webp",
+    heroLabel: "Board Exam Preparation",
+    heroTags: ["CBSE", "ICSE", "State Boards"],
+    classTags: [],
+    mentorLabel: "Board Exam Subject Experts",
+    mentorshipBenefit: "Direct Mentorship from Board Exam Subject Experts",
+    preparationBenefit: "Focused Board Exam Preparation",
+    courseheroimage:
+      "/images/inside-images/courses/banner/boardPrep-students.webp",
   },
 ];
