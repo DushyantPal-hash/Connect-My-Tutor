@@ -37,33 +37,32 @@ class CourseDetail extends HTMLElement {
         ? `${course.subjects.slice(0, -1).join(", ")} and ${course.subjects[course.subjects.length - 1]}`
         : course.subjects[0];
     const benefits = [
-      "Personalised One-to-One Learning",
+      "Personalised<span style='color:var(--yellow-light);'>One-to-One</span>Learning",
       course.mentorshipBenefit,
-      "Instant Doubt Solving",
+      "Instant<span style='color:var(--yellow-light);'>Doubt</span>Solving",
       course.preparationBenefit,
-      "Regular Assessments & Progress Tracking",
+      "Regular Assessments & Progress<span style='color:var(--yellow-light);'>Tracking<span>",
     ];
 
     this.innerHTML = `
       <section class="application-hero course-track-hero" data-course="${course.slug}">
         <div class="container course-track-hero-grid">
           <div class="course-track-hero-copy">
-            <span class="eyebrow">${course.heroLabel}</span>
             <h1>${course.title} Course</h1>
             <div class="course-track-tags" aria-label="${course.title} tracks">
               ${course.heroTags.map((tag) => `<span>${tag}</span>`).join("")}
             </div>
-            <div class="course-track-tags course-track-tags-subtle" aria-label="Classes and subjects">
-              ${[...course.classTags, ...course.subjects]
-                .map((item) => `<span>${item}</span>`)
-                .join("")}
+           <div class="course-track-tags course-track-tags-subtle" aria-label="Classes and subjects">
+              <div class="course-track-tag-row">
+                ${course.classTags.map((item) => `<span>${item}</span>`).join("")}
+              </div>
+              <div class="course-track-tag-row">
+                ${course.subjects.map((item) => `<span>${item}</span>`).join("")}
+              </div>
             </div>
             <h2>One to One Online Classes with ${course.mentorLabel}</h2>
            <div class="btn-box">
-                 <a href="for-parents.html" class="btn btn-primary">Ask about this course</a>
-                 <a href="courses.html" class="btn btn-outline arrow">View all courses
-                    <span aria-hidden="true">▶</span>
-                 </a>
+                 <a href="for-parents.html" class="btn btn-primary">Hire Your Tutor</a>
            </div>
           </div>
           <div class="course-track-hero-visual" aria-hidden="true"></div>
@@ -73,12 +72,12 @@ class CourseDetail extends HTMLElement {
         <div class="container course-track-benefits-layout">
           <div class="course-track-benefits-copy">
             <span class="eyebrow">A personal learning plan</span>
-            <h2 class="section-title">Make progress with the right support.</h2>
-            <p>Build confidence in ${subjects} with focused guidance for every step of your ${course.title} preparation.</p>
+            <h2 class="section-title">Make Progress with the Right Support.</h2>
+            <p>Build Confidence in ${subjects} with Focused guidance for every step of your ${course.title} Preparation.</p>
             <ol class="course-track-benefits-list">
               ${benefits.map((benefit) => `<li>${benefit}</li>`).join("")}
             </ol>
-            <a href="for-parents.html" class="btn btn-primary">Ask about this course</a>
+            <a href="for-parents.html" class="btn btn-secondary">Hire Your Tutor</a>
           </div>
           <figure class="course-track-art">
             <img src="${course.art}" alt="Illustration representing ${course.title} learning" loading="lazy">

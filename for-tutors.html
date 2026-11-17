@@ -45,11 +45,9 @@
             <div class="field">
               <label for="teacherGender">Gender</label>
               <select id="teacherGender" name="gender">
-                <option value="">Prefer not to say</option>
+                <option value="">-Select Gender-</option>
                 <option>Female</option>
                 <option>Male</option>
-                <option>Non-binary</option>
-                <option>Self-describe</option>
               </select>
             </div>
             <div class="field">
@@ -71,14 +69,14 @@
               </legend>
               <div class="choice-grid choice-grid-3">
                 <label class="choice-option">
-                  <input type="checkbox" name="classes" value="Class 9-12" /><span>Class 9–12</span>
+                  <input type="checkbox" name="classes" value="Class JEE" /><span>JEE</span>
                 </label>
                 <label class="choice-option">
-                  <input type="checkbox" name="classes" value="Class 9-10" /><span>Class 9–10</span>
+                  <input type="checkbox" name="classes" value="Class NEET" /><span>NEET</span>
                 </label>
-                <label class="choice-option">
+                <!-- <label class="choice-option">
                   <input type="checkbox" name="classes" value="Class 11-12" /><span>Class 11–12</span>
-                </label>
+                </label> -->
               </div>
               <p class="choice-error" data-group-error hidden></p>
             </fieldset>
@@ -100,11 +98,17 @@
                 <label class="choice-option">
                   <input type="checkbox" name="subjects" value="Biology" /><span>Biology</span>
                 </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="English" /><span>English</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Computers" /><span>Computers</span>
+                </label>
               </div>
               <p class="choice-error" data-group-error hidden></p>
             </fieldset>
 
-            <fieldset class="field-wide">
+            <!-- <fieldset class="field-wide">
               <legend>
                 Tuition format <span aria-hidden="true">*</span>
               </legend>
@@ -119,7 +123,7 @@
                   <input type="radio" name="teachingFormat" value="Both" /><span>Both</span>
                 </label>
               </div>
-            </fieldset>
+            </fieldset> -->
 
             <fieldset class="field-wide" data-required-group data-min-selections="1">
               <legend>
@@ -142,7 +146,7 @@
               <p class="choice-error" data-group-error hidden></p>
             </fieldset>
 
-            <fieldset class="field-wide">
+            <!-- <fieldset class="field-wide">
               <legend>
                 Study status <span aria-hidden="true">*</span>
               </legend>
@@ -154,7 +158,7 @@
                   <input type="radio" name="studyStatus" value="Passed out" /><span>Passed out</span>
                 </label>
               </div>
-            </fieldset>
+            </fieldset> -->
 
             <fieldset class="field-wide">
               <legend>
@@ -174,20 +178,20 @@
               <label for="teacherCity">City <span aria-hidden="true">*</span></label>
               <input id="teacherCity" name="city" autocomplete="address-level2" required />
             </div>
-            <div class="field">
+            <!-- <div class="field">
               <label for="teacherLocality">Locality <span aria-hidden="true">*</span></label>
               <input id="teacherLocality" name="locality" required />
-            </div>
+            </div> -->
             <div class="field">
               <label for="teacherExperience">Experience <span aria-hidden="true">*</span></label>
               <input id="teacherExperience" name="experience" placeholder="e.g. 3 years" required />
             </div>
-            <div class="field">
+            <!-- <div class="field">
               <label for="teacherPromo">Promotional code</label>
               <input id="teacherPromo" name="promotionalCode" autocomplete="off" />
-            </div>
+            </div> -->
 
-            <fieldset class="field-wide">
+            <!-- <fieldset class="field-wide">
               <legend>Would you be willing to teach a student for free?</legend>
               <div class="choice-grid choice-grid-2">
                 <label class="choice-option">
@@ -197,7 +201,7 @@
                   <input type="radio" name="volunteer" value="No" /><span>No</span>
                 </label>
               </div>
-            </fieldset>
+            </fieldset> -->
 
             <div class="field field-wide">
               <label for="teacherInfo">Additional information</label>
@@ -211,12 +215,12 @@
             sent or stored.
           </div>
           <div style="display: flex; justify-content: center;">
-            <button type="submit" class="btn btn-primary form-submit">Send tutor enquiry</button>
+            <button type="submit" class="btn btn-primary form-submit">Send Tutor Enquiry</button>
           </div>
-          <p class="application-footnote">
+          <!-- <p class="application-footnote">
             This demo form does not send or store your information. Contact the site owner
             to connect tutor applications.
-          </p>
+          </p> -->
         </form>
       </div>
     </section>

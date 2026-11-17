@@ -14,8 +14,10 @@ export const courseTracks = [
     heroTags: ["JEE Mains", "JEE Advance"],
     classTags: ["Class 11", "Class 12"],
     mentorLabel: "IITian Mentors",
-    mentorshipBenefit: "Direct Mentorship from IITians",
-    preparationBenefit: "Focused JEE Main & Advanced Preparation",
+    mentorshipBenefit:
+      "Direct Mentorship from<span style='color:var(--yellow-light);'>IITians</span>",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>JEE Main & Advanced Preparation",
     courseheroimage: "/images/inside-images/courses/banner/jee-students.webp",
   },
   {
@@ -33,8 +35,10 @@ export const courseTracks = [
     heroTags: ["NEET UG"],
     classTags: ["Class 11", "Class 12"],
     mentorLabel: "NEET Subject Experts",
-    mentorshipBenefit: "Direct Mentorship from NEET Subject Experts",
-    preparationBenefit: "Focused NEET Preparation",
+    mentorshipBenefit:
+      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from NEET Subject Experts",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>NEET Preparation",
     courseheroimage: "/images/inside-images/courses/banner/neet-students.webp",
   },
   {
@@ -57,11 +61,13 @@ export const courseTracks = [
       "Subject understanding, coursework planning, revision strategies and exam practice.",
     art: "images/inside-images/courses/ib.webp",
     heroLabel: "International Baccalaureate",
-    heroTags: ["IB Diploma Programme"],
+    heroTags: ["MYP 1 - 5", "DP 1", "DP 2"],
     classTags: [],
     mentorLabel: "IB Subject Experts",
-    mentorshipBenefit: "Direct Mentorship from IB Subject Experts",
-    preparationBenefit: "Focused IB Curriculum Support",
+    mentorshipBenefit:
+      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IB Subject Experts",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>IB Curriculum Support",
     courseheroimage: "/images/inside-images/courses/banner/ib-students.webp",
   },
   {
@@ -72,23 +78,18 @@ export const courseTracks = [
       "Cambridge curriculum support with clear concepts and focused exam practice.",
     description:
       "Strengthen subject knowledge and get comfortable with the style of IGCSE assessments. One-to-one lessons are shaped around your syllabus, current topics and goals.",
-    subjects: [
-      "Mathematics",
-      "Physics",
-      "Chemistry",
-      "Biology",
-      "English",
-      "Computer Science",
-    ],
+    subjects: ["Mathematics", "Physics", "Chemistry", "Biology", "English"],
     focus:
       "Syllabus-based learning, topic review, past-paper practice and exam confidence.",
     art: "images/inside-images/courses/igcse.webp",
     heroLabel: "Cambridge IGCSE",
-    heroTags: ["Cambridge IGCSE"],
+    heroTags: ["AS Level", "A Level", "IGCSE 10", "IGCSE 9"],
     classTags: [],
     mentorLabel: "IGCSE Subject Experts",
-    mentorshipBenefit: "Direct Mentorship from IGCSE Subject Experts",
-    preparationBenefit: "Focused IGCSE Preparation",
+    mentorshipBenefit:
+      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IGCSE Subject Experts",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>IGCSE Preparation",
     courseheroimage: "/images/inside-images/courses/banner/IGCSE-students.webp",
   },
   {
@@ -106,8 +107,10 @@ export const courseTracks = [
     heroTags: ["SAT Math", "Reading & Writing"],
     classTags: [],
     mentorLabel: "SAT Subject Experts",
-    mentorshipBenefit: "Direct Mentorship from SAT Subject Experts",
-    preparationBenefit: "Focused SAT Preparation",
+    mentorshipBenefit:
+      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from SAT Subject Experts",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>SAT Preparation",
     courseheroimage: "/images/inside-images/courses/banner/sat-students.webp",
   },
   {
@@ -123,10 +126,12 @@ export const courseTracks = [
     art: "images/inside-images/courses/board.webp",
     heroLabel: "Board Exam Preparation",
     heroTags: ["CBSE", "ICSE", "State Boards"],
-    classTags: [],
+    classTags: ["Class 8", "class 9", "class 10", "class 11", "class 12"],
     mentorLabel: "Board Exam Subject Experts",
-    mentorshipBenefit: "Direct Mentorship from Board Exam Subject Experts",
-    preparationBenefit: "Focused Board Exam Preparation",
+    mentorshipBenefit:
+      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from Board Exam Subject Experts",
+    preparationBenefit:
+      "<span style='color:var(--yellow-light);'>Focused</span>Board Exam Preparation",
     courseheroimage:
       "/images/inside-images/courses/banner/boardPrep-students.webp",
   },

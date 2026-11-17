@@ -113,6 +113,185 @@ if (courseCarousel) {
   updateTimer();
 }
 
+const quotes = document.querySelector(".quotes");
+if (quotes) {
+  const track = quotes.querySelector(".quotes-track");
+  const controls = document.querySelector(".quotes-controls");
+  const dots = controls.querySelector(".quotes-dots");
+  const previousButton = controls.querySelector("[data-quotes-previous]");
+  const nextButton = controls.querySelector("[data-quotes-next]");
+  const autoplayButton = controls.querySelector("[data-quotes-autoplay]");
+  const cards = [...track.querySelectorAll(".quote")];
+  const carouselSection = quotes.closest(".testimonials");
+  let visibleCount = 0;
+  let currentPage = 0;
+  let autoplayTimer;
+  let isAutoplayPaused = false;
+  let isHovered = carouselSection.matches(":hover");
+  let isFocused = false;
+  let isPointerDown = false;
+
+  const getVisibleCount = () => {
+    if (matchMedia("(max-width: 640px)").matches) return 1;
+    if (matchMedia("(max-width: 980px)").matches) return 2;
+    return 3;
+  };
+
+  const updateControls = () => {
+    const pageCount = dots.children.length;
+    currentPage = Math.min(
+      pageCount - 1,
+      Math.round(quotes.scrollLeft / quotes.clientWidth),
+    );
+    previousButton.disabled = currentPage === 0;
+    nextButton.disabled = currentPage >= pageCount - 1;
+    [...dots.children].forEach((dot, index) => {
+      if (index === currentPage) {
+        dot.setAttribute("aria-current", "true");
+      } else {
+        dot.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateAutoplay = () => {
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = undefined;
+    autoplayButton.hidden = reducedMotionPreference.matches;
+    autoplayButton.textContent = isAutoplayPaused ? "Play" : "Pause";
+    autoplayButton.setAttribute(
+      "aria-label",
+      isAutoplayPaused
+        ? "Resume automatic review slides"
+        : "Pause automatic review slides",
+    );
+
+    if (
+      reducedMotionPreference.matches ||
+      document.hidden ||
+      isAutoplayPaused ||
+      isHovered ||
+      isFocused ||
+      isPointerDown ||
+      dots.children.length <= 1
+    ) {
+      return;
+    }
+
+    autoplayTimer = window.setInterval(() => {
+      const nextPage = (currentPage + 1) % dots.children.length;
+      quotes.scrollTo({
+        left: nextPage * quotes.clientWidth,
+        behavior: "smooth",
+      });
+    }, 2500);
+  };
+
+  const buildSlides = (pageToShow = 0) => {
+    visibleCount = getVisibleCount();
+    const slides = [];
+    for (let index = 0; index < cards.length; index += visibleCount) {
+      const slide = document.createElement("div");
+      slide.className = "quote-slide";
+      slide.setAttribute("role", "group");
+      slide.setAttribute("aria-roledescription", "slide");
+      slide.setAttribute(
+        "aria-label",
+        `${slides.length + 1} of ${Math.ceil(cards.length / visibleCount)}`,
+      );
+      cards.slice(index, index + visibleCount).forEach((card) => {
+        slide.append(card);
+      });
+      slides.push(slide);
+    }
+
+    track.replaceChildren(...slides);
+    track.classList.add("is-carousel");
+    dots.replaceChildren(
+      ...slides.map((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "quotes-dot";
+        dot.setAttribute("aria-label", `Go to review slide ${index + 1}`);
+        dot.addEventListener("click", () => {
+          quotes.scrollTo({
+            left: index * quotes.clientWidth,
+            behavior: reducedMotionPreference.matches ? "auto" : "smooth",
+          });
+          updateAutoplay();
+        });
+        return dot;
+      }),
+    );
+
+    controls.hidden = slides.length <= 1;
+    currentPage = Math.min(pageToShow, slides.length - 1);
+    quotes.scrollLeft = currentPage * quotes.clientWidth;
+    updateControls();
+    updateAutoplay();
+  };
+
+  previousButton.addEventListener("click", () => {
+    quotes.scrollTo({
+      left: (currentPage - 1) * quotes.clientWidth,
+      behavior: reducedMotionPreference.matches ? "auto" : "smooth",
+    });
+    updateAutoplay();
+  });
+  nextButton.addEventListener("click", () => {
+    quotes.scrollTo({
+      left: (currentPage + 1) * quotes.clientWidth,
+      behavior: reducedMotionPreference.matches ? "auto" : "smooth",
+    });
+    updateAutoplay();
+  });
+  autoplayButton.addEventListener("click", () => {
+    isAutoplayPaused = !isAutoplayPaused;
+    isFocused = false;
+    updateAutoplay();
+  });
+  quotes.addEventListener("scroll", updateControls, { passive: true });
+
+  buildSlides();
+  carouselSection.addEventListener("mouseenter", () => {
+    isHovered = false;
+    updateAutoplay();
+  });
+  carouselSection.addEventListener("mouseleave", () => {
+    isHovered = false;
+    updateAutoplay();
+  });
+  carouselSection.addEventListener("focusin", () => {
+    isFocused = false;
+    updateAutoplay();
+  });
+  carouselSection.addEventListener("focusout", (event) => {
+    if (!carouselSection.contains(event.relatedTarget)) {
+      isFocused = false;
+      updateAutoplay();
+    }
+  });
+  carouselSection.addEventListener("pointerdown", () => {
+    isPointerDown = true;
+    updateAutoplay();
+  });
+  const resumeAfterPointerInteraction = () => {
+    isPointerDown = false;
+    updateAutoplay();
+  };
+  window.addEventListener("pointerup", resumeAfterPointerInteraction);
+  window.addEventListener("pointercancel", resumeAfterPointerInteraction);
+  document.addEventListener("visibilitychange", updateAutoplay);
+  reducedMotionPreference.addEventListener("change", updateAutoplay);
+  window.addEventListener("resize", () => {
+    const nextVisibleCount = getVisibleCount();
+    if (nextVisibleCount !== visibleCount) {
+      const firstCardIndex = currentPage * visibleCount;
+      buildSlides(Math.floor(firstCardIndex / nextVisibleCount));
+    }
+  });
+}
+
 document.querySelectorAll("form[data-demo-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();

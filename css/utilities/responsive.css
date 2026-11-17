@@ -113,12 +113,20 @@
 @media(max-width: 640px) {
 
     /* Nav */
+    .hide-in-desktop {
+        display: block;
+    }
+
     .logo-image {
         width: clamp(120px, 43vw, 164px);
     }
 
     .footer-brand .logo-image {
-        width: min(100%, 168px);
+        width: min(100%, 298px);
+    }
+
+    .card {
+        width: 100%;
     }
 
     .nav-links,
