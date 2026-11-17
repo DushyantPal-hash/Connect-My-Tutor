@@ -8,71 +8,62 @@ class SiteFooter extends HTMLElement {
             <a href="/" class="logo footer-brand">
               <img src="images/logo/finnal-logo.svg" alt="Connect My Tutor" class="logo-image" width="164" height="50">
             </a>
-            <p>Thoughtful tutoring for brighter futures. Online and in-person learning, shaped around every student.</p>
-            <div class="foot-social">
-              <div class="social-links">
-                <a href="https://www.linkedin.com" class="linkedin" aria-label="LinkedIn">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.youtube.com" class="youtube" aria-label="YouTube">
-                  <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.facebook.com" class="facebook" aria-label="Facebook">
-                  <i class="si si-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com" class="instagram" aria-label="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com" class="twitter" aria-label="X">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </div>
+           <div class="card">
+              <p>
+                <span>One Teacher.</span>
+                <span>One Student.</span>
+                <span class="highlite">Unlimited Growth.</span>
+                <div class="divider">
+                  <div class="line"></div>
+                  <div class="dot"></div>
+                  <div class="line"></div>
+                </div>
+                <span>Anywhere. Anytime.</span>
+              </p>
             </div>
           </div>
           <div>
             <h4>Company</h4>
             <ul>
-              <a href="about.html"><li>About us</li></a>
-              <a href="tutors.html"><li>Find a tutor</li></a>
               <a href="how-it-works.html"><li>How it works</li></a>
               <a href="contact.html"><li>Contact us</li></a>
-              <a href="faqs.html"><li>FAQs</li></a>
-            </ul>
-          </div>
-          <div>
-            <h4>For students</h4>
-            <ul>
-              <a href="courses.html"><li>All courses</li></a>
-              <a href="for-parents.html"><li>Student enquiry form</li></a>
-              <a href="course-boardprep.html"><li>BoardPrep</li></a>
-              <a href="for-parents.html"><li>Online courses</li></a>
             </ul>
           </div>
           <div>
             <h4>Academic tracks</h4>
             <ul>
+              <a href="courses.html"><li>All courses</li></a>
               <a href="course-ib.html"><li>IB</li></a>
               <a href="course-igcse.html"><li>IGCSE</li></a>
-              <a href="contact.html"><li>Pearson Edexcel</li></a>
+              <a href="course-boardprep.html"><li>BoardPrep</li></a>
             </ul>
           </div>
           <div>
             <h4>Exam preparation</h4>
             <ul>
-              <a href="course-sat.html"><li>SAT</li></a>
               <a href="course-jee.html"><li>JEE</li></a>
               <a href="course-neet.html"><li>NEET</li></a>
+              <a href="course-sat.html"><li>SAT</li></a>
             </ul>
           </div>
           <div>
             <h4>Get started</h4>
             <ul>
-              <a href="for-tutors.html"><li>Teacher application</li></a>
-              <a href="for-parents.html"><li>Student form</li></a>
-              <a href="tutors.html?subject=Mathematics"><li>Mathematics</li></a>
-              <a href="tutors.html?subject=Physics"><li>Sciences</li></a>
-              <a href="contact.html"><li>Email us</li></a>
-            </ul>
+              <a href="for-parents.html"><li>Hire a Tutor</li></a>
+              <a href="for-tutors.html"><li>Register as Tutor</li></a>
+            </ul> <div class="foot-social">
+              <div class="social-links">
+                <a href="https://www.linkedin.com/company/connectmytutor/" class="linkedin" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/connectmytutor" class="instagram" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/14pEmyShQ2H/" class="facebook" aria-label="Facebook">
+                  <i class="si si-facebook"></i>
+                </a>
+              </div>
+            </div>
             </div>
           </div>
         <div class="footer-bottom">

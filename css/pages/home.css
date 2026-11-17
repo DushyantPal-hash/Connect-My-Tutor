@@ -131,6 +131,11 @@
     box-shadow: 0 0 0 4px rgba(66, 169, 130, .12);
 }
 
+.coustom-heading {
+    font-size: clamp(2rem, 4.5vw, 3.6rem) !important;
+    margin-top: 0.9rem;
+}
+
 .home-page .hero-notice a {
     color: #278875;
     white-space: nowrap;
@@ -554,10 +559,45 @@
     translate: 0 0;
 }
 
+.text-size {
+    font-size: clamp(0.76rem, 2.99vw, 0.88rem)
+}
+
+.form-link-box {
+    display: flex;
+    gap: 10px;
+}
+
+.form-link-box span {
+    padding-left: 10px;
+}
+
+.form-link-box a {
+    transition: all 0.3s ease;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+}
+
+.form-link-box a:hover {
+    color: var(--yellow);
+    background: var(--gold);
+}
+
+.contact-line-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 @media (max-width: 640px) {
     .home-page #header.scrolled .nav {
         height: 62px;
         margin-top: 6px;
+    }
+
+    .form-link-box {
+        flex-direction: column;
+        gap: 5px;
     }
 }
 

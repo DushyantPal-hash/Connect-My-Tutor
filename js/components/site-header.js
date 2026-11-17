@@ -7,16 +7,15 @@ class SiteHeader extends HTMLElement {
             <img src="images/logo/finnal-logo.svg" alt="Connect My Tutor" class="logo-image" width="164" height="50">
           </a>
           <ul class="nav-links" id="navLinks">
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="for-parents.html">For parents</a></li>
-            <li><a href="become-a-tutor.html">Become a tutor</a></li>
-            <li><a href="tutors.html">Find tutors</a></li>
+            <li><a href="/#courses">Courses</a></li>
+            <li><a href="for-parents.html">For Parents</a></li>
+            <li><a href="become-a-tutor.html">Become a Tutor</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="hide-in-desktop"><a href="how-it-works.html">How it Works</a></li>
           </ul>
           <div class="nav-cta">
-            <a href="how-it-works.html" class="btn btn-outline">How it works</a>
-            <a href="tutors.html" class="btn btn-primary">Find a tutor</a>
+            <a href="how-it-works.html" class="btn btn-outline">How it Works</a>
+            <a href="for-tutors.html" class="btn btn-primary">Find a Tutor</a>
             <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
               <span></span><span></span><span></span>
             </button>

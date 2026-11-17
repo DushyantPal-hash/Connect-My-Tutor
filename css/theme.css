@@ -22,14 +22,12 @@ body.application-page header {
     background: var(--yellow);
 }
 
-.btn-primary,
-.join-card .btn {
+.btn-primary {
     background: var(--purple);
     color: #fff;
 }
 
-.btn-primary:hover,
-.join-card .btn:hover {
+.btn-primary:hover {
     background: var(--purple-light);
     color: #fff;
 }
@@ -636,7 +634,7 @@ body.home-page .hero-actions .btn-primary:hover {
 body.home-page .hero-seat-note {
     margin: 0;
     color: #d7cce3;
-    font-size: .82rem;
+    font-size: clamp(1.2rem, 2.99vw, 3rem);
     font-weight: 600;
     letter-spacing: .03em;
 }
@@ -866,7 +864,7 @@ body.home-page #why-connect-my-tutor .feature .icon {
     height: 52px;
     border-radius: 16px;
     background: #f0eaf7;
-    color: var(--purple);
+    color: var(--yellow-light);
 }
 
 body.home-page #why-connect-my-tutor .feature h3 {
@@ -894,5 +892,13 @@ body.home-page #why-connect-my-tutor .feature p {
 
     body.home-page #why-connect-my-tutor .feature:nth-child(n + 3) {
         border-top: 1px solid var(--line);
+    }
+
+    body.home-page #why-connect-my-tutor .feature p {
+        text-align: start;
+    }
+
+    body.home-page #why-connect-my-tutor .feature {
+        padding: 0.8rem;
     }
 }
