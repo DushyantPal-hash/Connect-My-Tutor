@@ -28,72 +28,208 @@
         <p style="color: var(--cream);">
           Bring your subject expertise and your own teaching style to learners looking for one-to-one support.
         </p>
-        <div class="page-actions"><a href="for-tutors.html" class="btn btn-primary">Open tutor application</a></div>
       </div>
     </section>
-    <section class="page-section page-section-cream">
-      <div class="container content-grid">
-        <article class="content-card">
-          <h2>Teach your way</h2>
-          <p>
-            Share your availability and discuss an online or in-person approach that suits you and your learner.
-          </p>
-        </article>
-        <article class="content-card">
-          <h2>Focus on meaningful progress</h2>
-          <p>
-            Help students build understanding, confidence, and a clear path toward their learning goals.
-          </p>
-        </article>
-        <article class="content-card">
-          <h2>Start a conversation</h2>
-          <p>
-            Tell us about your experience and the subjects you teach. Our team can follow up when applications are
-            connected.
-          </p>
-        </article>
-      </div>
-    </section>
-    <section class="page-content">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <span class="eyebrow">Register your interest</span>
-          <h2 class="section-title">Tell us about yourself.</h2>
-          <p>Share a few details about your teaching experience and the subjects you’d like to teach.</p>
-          <p class="site-disclaimer">
-            Our detailed tutor application asks about your teaching subjects, qualifications,
-            location, and availability.
-          </p>
-          <a href="for-tutors.html" class="text-size btn btn-primary">Continue to the tutor application</a>
-        </div>
-        <form data-email-form method="post" action="https://formsubmit.co/vaidyaiitd@gmail.com">
-          <input type="hidden" name="Source page" value="Tutor interest (become-a-tutor.html)" />
-          <div class="two">
+    <!-- Form  -->
+    <section class="page-content" id="tutor-form-sec">
+      <div class="container application-panel">
+        <p class="application-intro">
+          Please share your details below. Our team can follow up to discuss tuition
+          availability and fee structure.
+        </p>
+        <form class="application-form" data-email-form method="post"
+          action="https://formsubmit.co/vaidyaiitd@gmail.com">
+          <input type="hidden" name="Source page" value="Tutor application (for-tutors.html)" />
+          <div class="application-fields">
             <div class="field">
-              <label for="tutorName">Full name</label>
-              <input id="tutorName" name="name" autocomplete="name" required />
+              <label for="teacherName">Teacher’s name <span aria-hidden="true">*</span></label>
+              <input id="teacherName" name="name" autocomplete="name" required />
             </div>
             <div class="field">
-              <label for="tutorEmail">Email</label>
-              <input id="tutorEmail" name="email" type="email" autocomplete="email" required />
+              <label for="teacherGender">Gender</label>
+              <select id="teacherGender" name="gender">
+                <option value="">-Select Gender-</option>
+                <option>Female</option>
+                <option>Male</option>
+              </select>
             </div>
-          </div>
-          <div class="field">
-            <label for="tutorSubject">Subject(s) you teach</label>
-            <input id="tutorSubject" name="subjects" placeholder="e.g. Mathematics, Physics" required />
-          </div>
-          <div class="field">
-            <label for="tutorExperience">Teaching experience</label>
-            <textarea id="tutorExperience" name="experience" rows="5"
-              placeholder="Tell us about your experience and approach…" required>
-            </textarea>
+            <div class="field">
+              <label for="teacherMobile">Mobile <span aria-hidden="true">*</span></label>
+              <input id="teacherMobile" name="mobile" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="field">
+              <label for="teacherWhatsapp">WhatsApp</label>
+              <input id="teacherWhatsapp" name="whatsapp" type="tel" />
+            </div>
+            <div class="field">
+              <label for="teacherEmail">Email <span aria-hidden="true">*</span></label>
+              <input id="teacherEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <fieldset class="field-wide" data-required-group data-min-selections="1">
+              <legend>
+                Classes you can teach <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid choice-grid-4">
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class 6-10" /><span>Class 6-10</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class 11-12" /><span>Class 11–12</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class JEE" /><span>JEE</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class NEET" /><span>NEET</span>
+                </label>
+              </div>
+              <p class="choice-error" data-group-error hidden></p>
+            </fieldset>
+
+            <fieldset class="field-wide" data-required-group data-min-selections="1" data-max-selections="2">
+              <legend>
+                Subjects (choose up to 2) <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid">
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Physics" /><span>Physics</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Chemistry" /><span>Chemistry</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Mathematics" /><span>Mathematics</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Biology" /><span>Biology</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="English" /><span>English</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="subjects" value="Computers" /><span>Computers</span>
+                </label>
+              </div>
+              <p class="choice-error" data-group-error hidden></p>
+            </fieldset>
+
+            <!-- <fieldset class="field-wide">
+              <legend>
+                Tuition format <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid choice-grid-3">
+                <label class="choice-option">
+                  <input type="radio" name="teachingFormat" value="Home tuition" required /><span>Home tuition</span>
+                </label>
+                <label class="choice-option">
+                  <input type="radio" name="teachingFormat" value="Online tuition" /><span>Online tuition</span>
+                </label>
+                <label class="choice-option">
+                  <input type="radio" name="teachingFormat" value="Both" /><span>Both</span>
+                </label>
+              </div>
+            </fieldset> -->
+
+            <fieldset class="field-wide" data-required-group data-min-selections="1">
+              <legend>
+                Qualification <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid">
+                <label class="choice-option">
+                  <input type="checkbox" name="qualification" value="BTech" /><span>BTech</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="qualification" value="MTech" /><span>MTech</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="qualification" value="MSc" /><span>MSc</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="qualification" value="PhD" /><span>PhD</span>
+                </label>
+              </div>
+              <p class="choice-error" data-group-error hidden></p>
+            </fieldset>
+
+            <!-- <fieldset class="field-wide">
+              <legend>
+                Study status <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid choice-grid-2">
+                <label class="choice-option">
+                  <input type="radio" name="studyStatus" value="Studying" required /><span>Studying</span>
+                </label>
+                <label class="choice-option">
+                  <input type="radio" name="studyStatus" value="Passed out" /><span>Passed out</span>
+                </label>
+              </div>
+            </fieldset> -->
+
+            <fieldset class="field-wide">
+              <legend>
+                Are you an IIT graduate or student? <span aria-hidden="true">*</span>
+              </legend>
+              <div class="choice-grid choice-grid-2">
+                <label class="choice-option">
+                  <input type="radio" name="iit" value="Yes" required /><span>Yes</span>
+                </label>
+                <label class="choice-option">
+                  <input type="radio" name="iit" value="No" /><span>No</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="field" data-iit-detail hidden>
+              <label for="teacherIitName">IIT name <span aria-hidden="true">*</span></label>
+              <input id="teacherIitName" name="iitName" required disabled />
+            </div>
+            <div class="field" data-iit-detail hidden>
+              <label for="teacherIitRank">JEE rank <span aria-hidden="true">*</span></label>
+              <input id="teacherIitRank" name="iitRank" required disabled />
+            </div>
+
+            <div class="field">
+              <label for="teacherCity">City <span aria-hidden="true">*</span></label>
+              <input id="teacherCity" name="city" autocomplete="address-level2" required />
+            </div>
+            <!-- <div class="field">
+              <label for="teacherLocality">Locality <span aria-hidden="true">*</span></label>
+              <input id="teacherLocality" name="locality" required />
+            </div> -->
+            <div class="field">
+              <label for="teacherExperience">Experience <span aria-hidden="true">*</span></label>
+              <input id="teacherExperience" name="experience" placeholder="e.g. 3 years" required />
+            </div>
+            <!-- <div class="field">
+              <label for="teacherPromo">Promotional code</label>
+              <input id="teacherPromo" name="promotionalCode" autocomplete="off" />
+            </div> -->
+
+            <!-- <fieldset class="field-wide">
+              <legend>Would you be willing to teach a student for free?</legend>
+              <div class="choice-grid choice-grid-2">
+                <label class="choice-option">
+                  <input type="radio" name="volunteer" value="Yes" /><span>Yes</span>
+                </label>
+                <label class="choice-option">
+                  <input type="radio" name="volunteer" value="No" /><span>No</span>
+                </label>
+              </div>
+            </fieldset> -->
+
+            <div class="field field-wide">
+              <label for="teacherInfo">Additional information</label>
+              <textarea id="teacherInfo" name="additionalInformation" rows="5"
+                placeholder="Anything else you would like us to know?">
+              </textarea>
+            </div>
           </div>
           <div class="form-success" aria-live="polite" hidden>
             Thanks! Your details have been submitted to Connect My Tutor.
           </div>
           <div class="form-error" role="alert" hidden></div>
           <div style="display: flex; justify-content: center;">
-            <button type="submit" class="text-size btn btn-primary form-submit">Register my interest</button>
+            <button type="submit" class="btn btn-primary form-submit">Send Tutor Enquiry</button>
           </div>
           <!-- <p class="form-note">
             Your details will be forwarded to vaidyaiitd@gmail.com via FormSubmit, a third-party form service.
