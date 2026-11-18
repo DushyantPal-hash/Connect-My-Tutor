@@ -392,6 +392,15 @@
     .home-page .chip-3 {
         display: none;
     }
+
+    .floating-social-links {
+        right: 3px;
+    }
+
+    .floating-social-links a {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 
