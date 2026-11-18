@@ -501,16 +501,17 @@
                     </div>
                 </div>
             </div>
-            <form id="contactForm" data-demo-form>
+            <form id="contactForm" data-email-form method="post" action="https://formsubmit.co/vaidyaiitd@gmail.com">
+                <input type="hidden" name="Source page" value="Home page (index.html)" />
                 <div class="two">
-                    <div class="field"><label for="name">Full name</label><input id="name" type="text"
+                    <div class="field"><label for="name">Full name</label><input id="name" type="text" name="name"
                             placeholder="Jane Smith" required /></div>
-                    <div class="field"><label for="email">Email</label><input id="email" type="email"
+                    <div class="field"><label for="email">Email</label><input id="email" type="email" name="email"
                             placeholder="jane@email.com" required /></div>
                 </div>
                 <div class="two">
                     <div class="field"><label for="subject">Subject</label>
-                        <select id="subject" required>
+                        <select id="subject" name="subject" required>
                             <option value="">Choose a subject…</option>
                             <option>Mathematics</option>
                             <option>Physics</option>
@@ -524,7 +525,7 @@
                         </select>
                     </div>
                     <div class="field"><label for="level">Level</label>
-                        <select id="level" required>
+                        <select id="level" name="level" required>
                             <option value="">Choose a level…</option>
                             <option>Primary</option>
                             <option>GCSE / IGCSE</option>
@@ -534,14 +535,18 @@
                         </select>
                     </div>
                 </div>
-                <div class="field"><label for="message">Your goals</label><textarea id="message" rows="4"
+                <div class="field"><label for="message">Your goals</label><textarea id="message" name="message" rows="4"
                         placeholder="Tell us what you'd like to achieve…"></textarea></div>
-                <div class="form-success" id="formSuccess" aria-live="polite" hidden>Thanks! This demo form is ready to
-                    connect to a submission service.</div>
+                <div class="form-success" id="formSuccess" aria-live="polite" hidden>Thanks! Your details have been
+                    submitted to Connect My Tutor.</div>
+                <div class="form-error" role="alert" hidden></div>
                 <div style="display: flex; justify-content: center;">
                     <button type="submit" class="text-size btn btn-primary form-submit">Request My Tutor Match</button>
                 </div>
-                <!-- <p class="form-note">No payment required. Demo form only; submissions are not sent to a server.</p> -->
+                <!-- <p class="form-note">
+                    Your details will be forwarded to vaidyaiitd@gmail.com via FormSubmit, a third-party form
+                    service.
+                </p> -->
             </form>
         </div>
     </section>

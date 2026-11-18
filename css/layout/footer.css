@@ -2,6 +2,47 @@
    Footer
    ========================================================================== */
 
+.floating-social-links {
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    right: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform: translateY(-50%);
+}
+
+.floating-social-links a {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    color: #fff;
+    font-size: 19px;
+    box-shadow: 0 3px 12px rgba(20, 35, 65, .2);
+    transition: transform .2s ease;
+}
+
+/* .floating-social-links a:hover {
+    transform: scale(1.1);
+}
+
+.floating-social-links .instagram {
+    background: #e1306c;
+}
+
+.floating-social-links .facebook {
+    background: #4267b2;
+}
+
+.floating-social-links .whatsapp {
+    background: #25d366;
+} */
+
 footer {
     background: #e8f4fa;
     color: #50657c;
@@ -209,6 +250,10 @@ footer li:hover {
 
 .facebook:hover {
     background: linear-gradient(to right, #a5f3fc, #60a5fa, #4f46e5);
+}
+
+.whatsapp:hover {
+    background: linear-gradient(to right, #1cdc62, #1a8441, #109340);
 }
 
 .threads:hover {

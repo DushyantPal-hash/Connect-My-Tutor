@@ -18,7 +18,7 @@
     z-index: 0;
     inset: 0;
     display: block;
-    background-image: url("../images/inside-images/home-page/student-laptop.webp");
+    /* background-image: url("../../images/inside-images/home-page/student-laptop.webp"); */
     background-position: center 45%;
     background-size: cover;
     background-repeat: no-repeat;

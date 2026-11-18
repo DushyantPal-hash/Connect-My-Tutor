@@ -292,9 +292,97 @@ if (quotes) {
   });
 }
 
-document.querySelectorAll("form[data-demo-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+const iitRadios = document.querySelectorAll('input[name="iit"]');
+if (iitRadios.length) {
+  const iitDetails = document.querySelectorAll("[data-iit-detail]");
+  const updateIitDetails = () => {
+    const selectedIit = document.querySelector('input[name="iit"]:checked');
+    const isIit = selectedIit && selectedIit.value === "Yes";
+    iitDetails.forEach((field) => {
+      const input = field.querySelector("input");
+      field.hidden = !isIit;
+      input.disabled = !isIit;
+      if (!isIit) input.value = "";
+    });
+  };
+
+  iitRadios.forEach((radio) => {
+    radio.addEventListener("change", updateIitDetails);
+  });
+  updateIitDetails();
+}
+
+const emailForms = document.querySelectorAll("form[data-email-form]");
+if (emailForms.length) {
+  const successDialog = document.createElement("dialog");
+  successDialog.className = "form-confirmation";
+  successDialog.setAttribute("aria-labelledby", "formConfirmationTitle");
+
+  const successTitle = document.createElement("h2");
+  successTitle.id = "formConfirmationTitle";
+  successTitle.textContent = "Form submitted";
+  const successText = document.createElement("p");
+  successText.textContent =
+    "Your details have been sent to Connect My Tutor successfully.";
+  const closeDialogButton = document.createElement("button");
+  closeDialogButton.type = "button";
+  closeDialogButton.className = "btn btn-primary";
+  closeDialogButton.textContent = "Close";
+  closeDialogButton.addEventListener("click", () => successDialog.close());
+
+  successDialog.append(successTitle, successText, closeDialogButton);
+  document.body.append(successDialog);
+}
+
+emailForms.forEach((form) => {
+  const errorMessage = form.querySelector(".form-error");
+  let showingValidationError = false;
+
+  const updateValidationError = () => {
+    form
+      .querySelectorAll(
+        "input[aria-invalid], select[aria-invalid], textarea[aria-invalid]",
+      )
+      .forEach((field) => {
+        if (field.validity.valid) field.removeAttribute("aria-invalid");
+      });
+    const invalidField = form.querySelector(":invalid");
+    if (!invalidField) {
+      errorMessage.hidden = true;
+      showingValidationError = false;
+      return;
+    }
+
+    const fieldset = invalidField.closest("fieldset");
+    const label =
+      (fieldset && fieldset.querySelector("legend")) ||
+      (invalidField.labels && invalidField.labels[0]);
+    const fieldName = label
+      ? label.textContent.replace(/\s*\*$/, "").trim()
+      : "This field";
+    invalidField.setAttribute("aria-invalid", "true");
+    errorMessage.textContent = `${fieldName}: ${invalidField.validationMessage}`;
+    errorMessage.hidden = false;
+  };
+
+  const refreshValidationError = () => {
+    if (showingValidationError) updateValidationError();
+  };
+  form.addEventListener(
+    "invalid",
+    () => {
+      showingValidationError = true;
+      updateValidationError();
+    },
+    true,
+  );
+  form.addEventListener("input", refreshValidationError);
+  form.addEventListener("change", refreshValidationError);
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    errorMessage.hidden = true;
+    showingValidationError = false;
 
     form.querySelectorAll("[data-required-group]").forEach((group) => {
       const selected = group.querySelectorAll(
@@ -324,18 +412,81 @@ document.querySelectorAll("form[data-demo-form]").forEach((form) => {
     }
 
     if (!form.checkValidity()) {
-      form.reportValidity();
+      showingValidationError = true;
+      updateValidationError();
+      form.querySelector(":invalid").reportValidity();
       return;
     }
 
+    const formData = new FormData(form);
+    const submission = new URLSearchParams();
+    formData.forEach((value, name) => {
+      if (submission.has(name)) {
+        submission.set(name, `${submission.get(name)}, ${value}`);
+      } else {
+        submission.append(name, value);
+      }
+    });
+    submission.set("Source page", `${document.title} (${location.pathname})`);
+    submission.append("_subject", `New form submission - ${document.title}`);
+    submission.append("_template", "table");
+
     const successMessage = form.querySelector(".form-success");
-    successMessage.hidden = false;
-    form.querySelector('button[type="submit"]').textContent = "Form checked ✓";
-    form
-      .querySelectorAll("input, select, textarea, button")
-      .forEach((element) => {
-        element.disabled = true;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    errorMessage.hidden = true;
+    successMessage.hidden = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    form.setAttribute("aria-busy", "true");
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/vaidyaiitd@gmail.com",
+        {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: submission,
+        },
+      );
+      const result = await response.json();
+      const requestSucceeded =
+        result.success === true || result.success === "true";
+      if (!response.ok || !requestSucceeded) {
+        errorMessage.textContent =
+          typeof result.message === "string" && result.message.trim()
+            ? result.message
+            : `The form service returned status ${response.status}.`;
+        errorMessage.hidden = false;
+        return;
+      }
+
+      form.reset();
+      form.querySelectorAll("textarea").forEach((field) => {
+        field.value = "";
       });
+      form.querySelectorAll("[data-required-group]").forEach((group) => {
+        group.removeAttribute("aria-invalid");
+        const error = group.querySelector("[data-group-error]");
+        if (error) error.hidden = true;
+      });
+      const selectedIitRadio = form.querySelector('input[name="iit"]');
+      if (selectedIitRadio) {
+        selectedIitRadio.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      successMessage.hidden = true;
+      document.querySelector(".form-confirmation").showModal();
+    } catch (error) {
+      console.error("Form submission failed.", error);
+      errorMessage.textContent =
+        "We couldn't send your details. Please try again or email vaidyaiitd@gmail.com.";
+      errorMessage.hidden = false;
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+      form.removeAttribute("aria-busy");
+    }
   });
 });
 

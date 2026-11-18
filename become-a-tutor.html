@@ -66,7 +66,8 @@
           </p>
           <a href="for-tutors.html" class="text-size btn btn-primary">Continue to the tutor application</a>
         </div>
-        <form data-demo-form>
+        <form data-email-form method="post" action="https://formsubmit.co/vaidyaiitd@gmail.com">
+          <input type="hidden" name="Source page" value="Tutor interest (become-a-tutor.html)" />
           <div class="two">
             <div class="field">
               <label for="tutorName">Full name</label>
@@ -88,13 +89,15 @@
             </textarea>
           </div>
           <div class="form-success" aria-live="polite" hidden>
-            Thanks for your interest! This demo form is ready to
-            connect to an application service.
+            Thanks! Your details have been submitted to Connect My Tutor.
           </div>
+          <div class="form-error" role="alert" hidden></div>
           <div style="display: flex; justify-content: center;">
             <button type="submit" class="text-size btn btn-primary form-submit">Register my interest</button>
           </div>
-          <p class="form-note">Demo form only; submissions are not sent to a server.</p>
+          <!-- <p class="form-note">
+            Your details will be forwarded to vaidyaiitd@gmail.com via FormSubmit, a third-party form service.
+          </p> -->
         </form>
       </div>
     </section>
