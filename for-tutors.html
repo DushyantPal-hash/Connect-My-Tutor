@@ -36,7 +36,9 @@
           Please share your details below. Our team can follow up to discuss tuition
           availability and fee structure.
         </p>
-        <form class="application-form" data-demo-form>
+        <form class="application-form" data-email-form method="post"
+          action="https://formsubmit.co/vaidyaiitd@gmail.com">
+          <input type="hidden" name="Source page" value="Tutor application (for-tutors.html)" />
           <div class="application-fields">
             <div class="field">
               <label for="teacherName">Teacher’s name <span aria-hidden="true">*</span></label>
@@ -67,16 +69,19 @@
               <legend>
                 Classes you can teach <span aria-hidden="true">*</span>
               </legend>
-              <div class="choice-grid choice-grid-3">
+              <div class="choice-grid choice-grid-4">
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class 6-10" /><span>Class 6-10</span>
+                </label>
+                <label class="choice-option">
+                  <input type="checkbox" name="classes" value="Class 11-12" /><span>Class 11–12</span>
+                </label>
                 <label class="choice-option">
                   <input type="checkbox" name="classes" value="Class JEE" /><span>JEE</span>
                 </label>
                 <label class="choice-option">
                   <input type="checkbox" name="classes" value="Class NEET" /><span>NEET</span>
                 </label>
-                <!-- <label class="choice-option">
-                  <input type="checkbox" name="classes" value="Class 11-12" /><span>Class 11–12</span>
-                </label> -->
               </div>
               <p class="choice-error" data-group-error hidden></p>
             </fieldset>
@@ -173,6 +178,14 @@
                 </label>
               </div>
             </fieldset>
+            <div class="field" data-iit-detail hidden>
+              <label for="teacherIitName">IIT name <span aria-hidden="true">*</span></label>
+              <input id="teacherIitName" name="iitName" required disabled />
+            </div>
+            <div class="field" data-iit-detail hidden>
+              <label for="teacherIitRank">JEE rank <span aria-hidden="true">*</span></label>
+              <input id="teacherIitRank" name="iitRank" required disabled />
+            </div>
 
             <div class="field">
               <label for="teacherCity">City <span aria-hidden="true">*</span></label>
@@ -211,15 +224,14 @@
             </div>
           </div>
           <div class="form-success" aria-live="polite" hidden>
-            Your form has been checked in this demo. It has not been
-            sent or stored.
+            Thanks! Your details have been submitted to Connect My Tutor.
           </div>
+          <div class="form-error" role="alert" hidden></div>
           <div style="display: flex; justify-content: center;">
             <button type="submit" class="btn btn-primary form-submit">Send Tutor Enquiry</button>
           </div>
-          <!-- <p class="application-footnote">
-            This demo form does not send or store your information. Contact the site owner
-            to connect tutor applications.
+          <!-- <p class="form-note">
+            Your details will be forwarded to vaidyaiitd@gmail.com via FormSubmit, a third-party form service.
           </p> -->
         </form>
       </div>

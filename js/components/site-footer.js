@@ -1,6 +1,20 @@
 class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+    <nav class="floating-social-links" aria-label="Social media">
+      <a href="https://www.linkedin.com/company/connectmytutor/" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.instagram.com/connectmytutor" class="instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.facebook.com/share/14pEmyShQ2H/" class="facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/919820798275" class="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </nav>
     <footer>
       <div class="container">
         <div class="footer-grid">

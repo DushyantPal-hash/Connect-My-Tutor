@@ -18,7 +18,7 @@ export const courseTracks = [
       "Direct Mentorship from<span style='color:var(--yellow-light);'>IITians</span>",
     preparationBenefit:
       "<span style='color:var(--yellow-light);'>Focused</span>JEE Main & Advanced Preparation",
-    courseheroimage: "/images/inside-images/courses/banner/jee-students.webp",
+    courseheroimage: "/images/inside-images/courses/banner/jee-ban.webp",
   },
   {
     slug: "neet",
@@ -39,7 +39,7 @@ export const courseTracks = [
       "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from NEET Subject Experts",
     preparationBenefit:
       "<span style='color:var(--yellow-light);'>Focused</span>NEET Preparation",
-    courseheroimage: "/images/inside-images/courses/banner/neet-students.webp",
+    courseheroimage: "/images/inside-images/courses/banner/neet-ban.webp",
   },
   {
     slug: "ib",
@@ -68,7 +68,7 @@ export const courseTracks = [
       "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IB Subject Experts",
     preparationBenefit:
       "<span style='color:var(--yellow-light);'>Focused</span>IB Curriculum Support",
-    courseheroimage: "/images/inside-images/courses/banner/ib-students.webp",
+    courseheroimage: "/images/inside-images/courses/banner/ib-banner.webp",
   },
   {
     slug: "igcse",
@@ -90,7 +90,7 @@ export const courseTracks = [
       "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IGCSE Subject Experts",
     preparationBenefit:
       "<span style='color:var(--yellow-light);'>Focused</span>IGCSE Preparation",
-    courseheroimage: "/images/inside-images/courses/banner/IGCSE-students.webp",
+    courseheroimage: "/images/inside-images/courses/banner/ib-students.webp",
   },
   {
     slug: "sat",
@@ -111,7 +111,7 @@ export const courseTracks = [
       "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from SAT Subject Experts",
     preparationBenefit:
       "<span style='color:var(--yellow-light);'>Focused</span>SAT Preparation",
-    courseheroimage: "/images/inside-images/courses/banner/sat-students.webp",
+    courseheroimage: "/images/inside-images/courses/banner/sat-ban.webp",
   },
   {
     slug: "boardprep",
@@ -126,7 +126,7 @@ export const courseTracks = [
     art: "images/inside-images/courses/board.webp",
     heroLabel: "Board Exam Preparation",
     heroTags: ["CBSE", "ICSE", "State Boards"],
-    classTags: ["Class 8", "class 9", "class 10", "class 11", "class 12"],
+    classTags: ["Class 8", "Class 9", "Class 10", "Class 11", "Class 12"],
     mentorLabel: "Board Exam Subject Experts",
     mentorshipBenefit:
       "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from Board Exam Subject Experts",

@@ -15,7 +15,7 @@
     isolation: isolate;
 }
 
-.application-hero:not(.hero)::after,
+/* .application-hero:not(.hero)::after,
 .page-hero::after {
     position: absolute;
     z-index: -1;
@@ -24,11 +24,11 @@
     width: clamp(210px, 30vw, 370px);
     aspect-ratio: 560 / 460;
     content: "";
-    background: url("../images/academic-illustration.svg") center / contain no-repeat;
+    background: url("../../images/academic-illustration.svg") center / contain no-repeat;
     opacity: .94;
     transform: translateY(-42%);
     pointer-events: none;
-}
+} */
 
 .application-hero:not(.hero)>.container,
 .page-hero>.container {
