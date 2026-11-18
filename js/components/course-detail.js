@@ -28,6 +28,13 @@ class CourseDetail extends HTMLElement {
       this.style.setProperty("--courseheroimage", "none");
     }
 
+    if (course.courseheroimagemobile) {
+      this.style.setProperty(
+        "--courseheroimage-mobile",
+        `url("${course.courseheroimagemobile}")`,
+      );
+    }
+
     this.renderCourseTrack(course);
   }
 
@@ -37,11 +44,11 @@ class CourseDetail extends HTMLElement {
         ? `${course.subjects.slice(0, -1).join(", ")} and ${course.subjects[course.subjects.length - 1]}`
         : course.subjects[0];
     const benefits = [
-      "Personalised<span style='color:var(--yellow-light);'>One-to-One</span>Learning",
+      "<span>Personalised <span style='color:var(--yellow-light);'>One-to-One</span> Learning</span>",
       course.mentorshipBenefit,
-      "Instant<span style='color:var(--yellow-light);'>Doubt</span>Solving",
+      "<span> Instant <span style='color:var(--yellow-light);'>Doubt</span> Solving</span>",
       course.preparationBenefit,
-      "Regular Assessments & Progress<span style='color:var(--yellow-light);'>Tracking<span>",
+      "<span>Regular Assessments & Progress <span style='color:var(--yellow-light);'>Tracking<span></span>",
     ];
 
     this.innerHTML = `
