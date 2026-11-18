@@ -15,10 +15,12 @@ export const courseTracks = [
     classTags: ["Class 11", "Class 12"],
     mentorLabel: "IITian Mentors",
     mentorshipBenefit:
-      "Direct Mentorship from<span style='color:var(--yellow-light);'>IITians</span>",
+      "<span>Direct Mentorship from <span style='color:var(--yellow-light);'> IITians</span></span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>JEE Main & Advanced Preparation",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> JEE Main & Advanced Preparation</span>",
     courseheroimage: "/images/inside-images/courses/banner/jee-ban.webp",
+    courseheroimagemobile:
+      "/images/inside-images/courses/banner/jee-mobile-banner.webp",
   },
   {
     slug: "neet",
@@ -36,10 +38,12 @@ export const courseTracks = [
     classTags: ["Class 11", "Class 12"],
     mentorLabel: "NEET Subject Experts",
     mentorshipBenefit:
-      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from NEET Subject Experts",
+      "<span><span style='color:var(--yellow-light);'>Direct Mentorship</span> from NEET Subject Experts</span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>NEET Preparation",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> NEET Preparation</span>",
     courseheroimage: "/images/inside-images/courses/banner/neet-ban.webp",
+    courseheroimagemobile:
+      "/images/inside-images/courses/banner/neet-mobile-banner.webp",
   },
   {
     slug: "ib",
@@ -65,10 +69,12 @@ export const courseTracks = [
     classTags: [],
     mentorLabel: "IB Subject Experts",
     mentorshipBenefit:
-      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IB Subject Experts",
+      "<span><span style='color:var(--yellow-light);'>Direct Mentorship</span> from IB Subject Experts</span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>IB Curriculum Support",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> IB Curriculum Support</span>",
     courseheroimage: "/images/inside-images/courses/banner/ib-banner.webp",
+    courseheroimagemobile:
+      "/images/inside-images/courses/banner/ib-mobile-banner.webp",
   },
   {
     slug: "igcse",
@@ -87,9 +93,9 @@ export const courseTracks = [
     classTags: [],
     mentorLabel: "IGCSE Subject Experts",
     mentorshipBenefit:
-      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from IGCSE Subject Experts",
+      "<span><span style='color:var(--yellow-light);'>Direct Mentorship</span> from IGCSE Subject Experts</span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>IGCSE Preparation",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> IGCSE Preparation</span>",
     courseheroimage: "/images/inside-images/courses/banner/ib-students.webp",
   },
   {
@@ -108,10 +114,12 @@ export const courseTracks = [
     classTags: [],
     mentorLabel: "SAT Subject Experts",
     mentorshipBenefit:
-      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from SAT Subject Experts",
+      "<span><span style='color:var(--yellow-light);'>Direct Mentorship</span> from SAT Subject Experts</span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>SAT Preparation",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> SAT Preparation</span>",
     courseheroimage: "/images/inside-images/courses/banner/sat-ban.webp",
+    courseheroimagemobile:
+      "/images/inside-images/courses/banner/sat-mobile-banner.webp",
   },
   {
     slug: "boardprep",
@@ -129,9 +137,9 @@ export const courseTracks = [
     classTags: ["Class 8", "Class 9", "Class 10", "Class 11", "Class 12"],
     mentorLabel: "Board Exam Subject Experts",
     mentorshipBenefit:
-      "<span style='color:var(--yellow-light);'>Direct Mentorship</span>from Board Exam Subject Experts",
+      "<span><span style='color:var(--yellow-light);'>Direct Mentorship</span> from Board Exam Subject Experts</span>",
     preparationBenefit:
-      "<span style='color:var(--yellow-light);'>Focused</span>Board Exam Preparation",
+      "<span><span style='color:var(--yellow-light);'>Focused</span> Board Exam Preparation</span>",
     courseheroimage:
       "/images/inside-images/courses/banner/boardPrep-students.webp",
   },
