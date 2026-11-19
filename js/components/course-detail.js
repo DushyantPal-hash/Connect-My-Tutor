@@ -15,25 +15,21 @@ class CourseDetail extends HTMLElement {
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = course.summary;
 
-    // Add the page class so the CSS styles apply (already in your HTML body, but safe to have)
     this.classList.add("course-track-page");
 
-    // Set the background image variable. If it's missing, fallback to 'none'
-    if (course.courseheroimage) {
-      this.style.setProperty(
-        "--courseheroimage",
-        `url("${course.courseheroimage}")`,
-      );
-    } else {
-      this.style.setProperty("--courseheroimage", "none");
-    }
+    // Desktop hero image (fallback to none)
+    this.style.setProperty(
+      "--courseheroimage",
+      course.courseheroimage ? `url("${course.courseheroimage}")` : "none",
+    );
 
-    if (course.courseheroimagemobile) {
-      this.style.setProperty(
-        "--courseheroimage-mobile",
-        `url("${course.courseheroimagemobile}")`,
-      );
-    }
+    // Mobile hero image (fallback to desktop image, then to none)
+    const mobileImage =
+      course.courseheroimagemobile || course.courseheroimage || null;
+    this.style.setProperty(
+      "--courseheroimage-mobile",
+      mobileImage ? `url("${mobileImage}")` : "none",
+    );
 
     this.renderCourseTrack(course);
   }
