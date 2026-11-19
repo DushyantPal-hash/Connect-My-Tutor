@@ -46,7 +46,7 @@ class SiteFooter extends HTMLElement {
           <div>
             <h4>Academic tracks</h4>
             <ul>
-              <a href="courses.html"><li>All courses</li></a>
+              <a href="/#courses"><li>All courses</li></a>
               <a href="course-ib.html"><li>IB</li></a>
               <a href="course-igcse.html"><li>IGCSE</li></a>
               <a href="course-boardprep.html"><li>BoardPrep</li></a>
