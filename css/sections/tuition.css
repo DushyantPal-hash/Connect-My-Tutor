@@ -4,6 +4,7 @@
 
 .tuition-section {
     background: linear-gradient(145deg, #f8fcff 0%, #eff8fc 55%, #f8f3ff 100%);
+    /* background: linear-gradient(145deg, #f8f5fb 0%, #f0eaf7 100%); */
 }
 
 .tuition-grid {

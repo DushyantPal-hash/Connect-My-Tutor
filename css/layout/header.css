@@ -80,7 +80,7 @@ body.application-page header {
     bottom: 0;
     width: 0;
     height: 1.5px;
-    background: var(--gold);
+    background: var(--yellow);
     transition: .3s;
 }
 

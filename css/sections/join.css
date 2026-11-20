@@ -21,10 +21,12 @@
     border: 1px solid var(--line);
     border-radius: 20px;
     background: linear-gradient(135deg, #f1faff, #fff);
+    /* background: linear-gradient(135deg, #f5f0fa, #fff); */
 }
 
 .join-teacher {
     background: linear-gradient(135deg, #f7f0ff, #fff);
+    /* background: linear-gradient(135deg, #eaf1fa, #fff); */
 }
 
 .join-icon {

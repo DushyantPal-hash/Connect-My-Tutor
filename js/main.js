@@ -442,7 +442,7 @@ emailForms.forEach((form) => {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/vaidyaiitd@gmail.com",
+        "https://formsubmit.co/ajax/connectmytutor@gmail.com",
         {
           method: "POST",
           headers: { Accept: "application/json" },
@@ -480,7 +480,7 @@ emailForms.forEach((form) => {
     } catch (error) {
       console.error("Form submission failed.", error);
       errorMessage.textContent =
-        "We couldn't send your details. Please try again or email vaidyaiitd@gmail.com.";
+        "We couldn't send your details. Please try again or email connectmytutor@gmail.com.";
       errorMessage.hidden = false;
     } finally {
       submitButton.disabled = false;
