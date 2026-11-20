@@ -3,7 +3,11 @@
    ========================================================================== */
 
 .home-page {
-    background: #f7f1e8;
+    background: var(--paper);
+}
+
+.home-hero {
+    background: radial-gradient(ellipse at 84% 12%, rgb(243 229 43 / 0%), #000000d6 33%), radial-gradient(ellipse at 12% 84%, rgba(21, 94, 170, .1), transparent 40%), linear-gradient(125deg, rgb(39 12 136) 0%, #2a084c 58%, #39254c 100%);
 }
 
 /* Header override for home */
@@ -461,25 +465,16 @@
 .home-page .courses-section,
 .home-page #subjects,
 .home-page .join-section {
-    background: #fbf8f2;
+    background: var(--paper);
 }
 
-.home-page .tuition-section,
+/* .home-page .tuition-section,
 .home-page .testimonials {
     background: linear-gradient(145deg, #f3f5ec 0%, #f8f2e9 100%);
-}
+} */
 
 .home-page .how {
     background: linear-gradient(130deg, #f5f0e7 0%, #f8f5ed 55%, #eef4ed 100%);
-}
-
-.home-page .marquee {
-    border-color: #e8dfd1;
-    background: #f3eee4;
-}
-
-.home-page .marquee-track span::before {
-    color: #d98736;
 }
 
 .home-page .feature {
@@ -598,6 +593,10 @@
     .form-link-box {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .home-hero {
+        background: none;
     }
 }
 

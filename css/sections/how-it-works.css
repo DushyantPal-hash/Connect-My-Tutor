@@ -28,7 +28,7 @@
     border: 1px solid #dceaf2;
     border-radius: var(--radius);
     padding: 1.2rem;
-    background: rgba(255, 255, 255, .78);
+    background: var(--paper);
     box-shadow: 0 8px 26px rgba(37, 83, 112, .05);
     transition: .35s;
 }

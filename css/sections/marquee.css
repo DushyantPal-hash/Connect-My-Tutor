@@ -4,7 +4,7 @@
 
 .marquee {
     border-block: 1px solid var(--line);
-    background: #f0f8fc;
+    background: linear-gradient(145deg, #f8f5fb 0%, #f0eaf7 100%);
     overflow: hidden;
     padding: 1.1rem 0;
 }
@@ -20,7 +20,7 @@
 .marquee-track span {
     font-family: var(--serif);
     font-size: 1.15rem;
-    color: #50647b;
+    color: var(--purple);
     display: flex;
     align-items: center;
     gap: .7rem;
@@ -28,7 +28,8 @@
 
 .marquee-track span::before {
     content: "✦";
-    color: #8433c6;
+    color: #e89a2e;
+    /* color: var(--yellow-light); */
     font-size: .8rem;
 }
 

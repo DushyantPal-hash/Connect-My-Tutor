@@ -56,10 +56,6 @@
     color: var(--gold);
 }
 
-.contact-section {
-    padding-top: 1rem;
-}
-
 /* FAQ */
 .faq-list {
     display: grid;

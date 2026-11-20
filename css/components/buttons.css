@@ -30,7 +30,7 @@
 
 .btn-primary:hover {
     background: var(--gold-soft);
-    color: var(--ink);
+    color: var(--yellow);
     transform: translateY(-2px);
 }
 
@@ -52,7 +52,8 @@
 }
 
 .btn-outline:hover {
-    border-color: var(--ink);
+    border-color: var(--yellow);
+    color: var(--yellow);
     transform: translateY(-2px);
 }
 
@@ -75,7 +76,7 @@
 }
 
 .btn-outline-black:hover {
-    border-color: #dba067;
-    color: #ad6527;
+    border-color: var(--yellow);
+    color: var(--yellow);
     transform: translateY(-2px);
 }
